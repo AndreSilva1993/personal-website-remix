@@ -1,0 +1,209 @@
+{
+  "common": {
+    "goBack": "Go Back"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "travels": "Travels",
+    "music": "Music"
+  },
+  "404": {
+    "seo": {
+      "title": "404",
+      "description": "The page you requested was lost in space"
+    },
+    "title": "404",
+    "description": "The page you requested was lost in space",
+    "cta": "Return to homepage"
+  },
+  "about": {
+    "seo": {
+      "title": "About Me | André Silva",
+      "description": "Hello, I'm a web developer located in Oporto, Portugal. Forever a surfing and travel lover while coding away in his Macbook Pro - which is obviously owned by the company I currently work at."
+    },
+    "title": "André Silva - Web Developer",
+    "about-me": "About Me",
+    "description": "Hello, I'm a web developer located in Oporto, Portugal. Forever a sports (mostly surfing and everything racket-related) and travel lover while coding away in his MacBook Pro - which is obviously owned by the company I currently work at. I'm also very passionate when it comes to music and movies spending countless hours inside the cinema theaters. Also really enjoy photography but as of now, it's only a hobby fulfilled by my faithful iPhone and Photos app for simple color and lighting edition - a sentence which would make any professional photographer wince.",
+    "technologies": "Technologies"
+  },
+  "portfolio": {
+    "seo": {
+      "title": "Portfolio",
+      "description": "The main projects I worked on during my web development career."
+    },
+    "title": "Portfolio",
+    "items": {
+      "docker": "Docker allows developers to quickly spin up development and production environments without having to manually install all the needed tools and dependencies using the technology of containerization. Developers can create images based from scratch or based on some popular languages (Node.js / Python) or services (Redis / Nginx) and afterwards only run them with a couple of commands and every service is immediately available. Using docker-compose can make this process even easier since one can specify all the services required for a project in an YAML file and with a single command, start them all simultaneously. Docker Desktop, the project in which I worked on, is an Electron-based application that allows users to interact with the the underlying Docker engine. The UI serves as a complement for the Docker CLI for features more easily done with a graphical interface such as quickly removing multiple containers / images / volumes, checking the volumes file contents, inspecting running containers to check its logs / environment variables / volumes / exposed ports.",
+      "burberry": "Burberry is a British luxury fashion house headquartered in London, England. It currently designs and distributes ready to wear including trench coats (for which it is most famous), leather goods, footwear, fashion accessories, eye-wear, fragrances, and cosmetics. Established in 1856 by Thomas Burberry, originally focusing on the development of outdoor attire, the house has moved into the high fashion market, developing gabardine, and products made exclusively for the brand. In this project I was one of the frontend developers behind the brand's content and editorial pages used in several campaigns and launches. The concept behind the project consisted in using the ContentStack CMS where the content creators could build the pages using re-usable components that the frontend application would then map into styled React components. To achieve this the project was developed using the React framework Next.js alongside TypeScript, Emotion, HTML 5 and CSS 3.",
+      "tankey": "Tankey is a dutch mobile app which allows their customers in the Netherlands to refuel their cars while saving money in a direct and straight-forward manner. They just have to select the station they're currently at and the fuel pump they're using and as soon as they're ready to pay, the discount has already been provided in the total value. In order for this to work, I had to develop the API which the mobile apps used to create a new fueling session and the consequent communication with the several fuel companies existing in the Netherlands. This was built in Ruby On Rails and PostgreSQL and for monitoring purposes I was also responsible for creating an admin dashboard in which the Tankey shareholders would be able to see which stations were performing the best, which kind of fuel people used the most, the price fluctuation for every single fuel provider in the Netherlands and many other metrics.",
+      "carmo": "Carmo is made up of a group of 10 companies based in Portugal, and the whole process of transformation, product creation, and technical development is Portuguese. Carmo offers a wide range of products in the national territory and across borders, in sectors as diverse as agriculture, the equestrian world, construction, tourism, leisure, security, and telecommunications. To promote this brand, I helped develop a website where the users could see their diverse catalogue using HTML 5, CSS 3, PHP framework Yii 2 and jQuery.",
+      "toconline": "TOConline is one of the biggest billing and accounting program in Portugal which allows tens of thousands of accountants and managers run every single aspect of their company on it. Management of their employees, contracts, salaries, sales, purchases, assets, accounting / billing were some of the features provided by TOConline and the product was in constant evolution as the company established a close communication with their customers which constantly requested new features. In this particular project I was responsible for the development and management of re-usable Polymer components that the other developers would use to create new pages and features. Those components would range from simple ones as buttons, labels, badges to more complex ones such as a full-on data grid with data fetching, pagination, caching and re-fetching when the information was marked as stale and so many other features. To a lesser extent, I've also developed some small features on the backend side of things using Ruby and PostgreSQL."
+    }
+  },
+  "travels": {
+    "seo": {
+      "title": "Travels",
+      "description": "As an addicted traveler always looking into the next adventure, these have been all my trips and all the photos I've taken."
+    },
+    "title": "Travels",
+    "countries": {
+      "world": "World",
+      "es": "Spain",
+      "hu": "Hungary",
+      "pt": "Portugal",
+      "cz": "Czech Republic",
+      "gb": "United Kingdom",
+      "it": "Italy",
+      "hr": "Croatia",
+      "us": "United States"
+    },
+    "places": {
+      "london": {
+        "kew-gardens": "Kew Gardens",
+        "british-museum": "British Museum",
+        "national-gallery": "National Gallery",
+        "london-eye": "London Eye",
+        "natural-history-museum": "Natural History Museum",
+        "westminster-abbey": "Westminster Abbey",
+        "saint-pancras-international": "Saint Pancras International",
+        "the-shard": "The Shard",
+        "hays-galleria": "Hay's Galleria",
+        "harrods": "Harrods",
+        "hyde-park": "Hyde Park",
+        "sky-garden": "Sky Garden"
+      },
+      "barcelona": {
+        "tibidabo": "Tibidabo",
+        "montserrat": "Monserrat",
+        "spain-square": "Spain Square",
+        "park-guell": "Park Guell",
+        "arc-de-triomf": "Arc De Triomf",
+        "sagrada-familia": "Sagrada Familia",
+        "casa-batllo": "Casa Batlló",
+        "casa-mila": "Casa Milà",
+        "barcelona-cathedral": "Cathedral of Barcelona",
+        "cathedral-la-ribera": "Cathedral of La Ribera"
+      },
+      "azores": {
+        "lagoon-seven-cities": "Lagoon of the Seven Cities",
+        "monte-palace-hotel": "Monte Palace Hotel",
+        "hells-mouth-viewpoint": "Hell's Mouth Viewpoint",
+        "lake-of-fire": "Lake of Fire",
+        "caldeira-velha": "Caldeira Velha Environmental Interpretation Centre",
+        "carvao-cave": "Carvão Cave",
+        "salto-cavalo-viewpoint": "Salto do Cavalo Viewpoint",
+        "terra-nostra-garden": "Terra Nostra Garden",
+        "ponta-sossego-viewpoint": "Ponta do Sossego Viewpoint",
+        "congro-lake": "Congro Lake",
+        "grena-park": "Grená Park",
+        "cumeeiras-viewpoint": "Cumeeiras Viewpoint",
+        "furnas-lake": "Furnas Lake"
+      },
+      "madeira": {
+        "balcoes-viewpoint": "Balcões Viewpoint",
+        "monte-palace": "Monte Palace",
+        "cape-girao": "Cape Girão",
+        "queimadas-forest-park": "Queimadas Forest Park",
+        "sao-lourenco-point": "São Lourenço Point"
+      },
+      "prague-budapest": {
+        "st-vitus-cathedral": "St. Vitus Cathedral",
+        "vysehrad": "Vysehrad",
+        "dancing-house": "Dancing House",
+        "national-museum": "National Museum",
+        "matthias-church": "Matthias Church",
+        "dohany-street-synagogue": "Dohány Street Synagogue",
+        "hungarian-parliament": "Hungarian Parliament",
+        "hungarian-national-museum": "Hungarian National Museum",
+        "fisherman-bastion": "Fisherman's Bastion",
+        "st-stephen-basilica": "St. Stephen's Basilica"
+      },
+      "northern-italy": {
+        "galleria-vittorio-emanuele-ii": "Galleria Vittorio Emanuele II",
+        "milan-cathedral": "Milan Cathedral",
+        "cathedral-of-santa-maria-del-fiore": "Cathedral of Santa Maria del Fiore",
+        "accademia-gallery": "Accademia Gallery",
+        "gates-of-paradise": "Gates of Paradise",
+        "michelangelo-square": "Michelangelo Square",
+        "venice-canals": "Venice Canals"
+      },
+      "croatia": {
+        "zadar": "Zadar",
+        "dubrovnik": "Dubrovnik",
+        "lokrum": "Lokrum Island",
+        "gric-tunnel": "Gric Tunnel",
+        "klis-fortress": "Klis Fortress",
+        "plitvice-lakes": "Plitvice Lakes",
+        "golden-horn-beach": "Golden Horn Beach",
+        "krka-national-park": "Krka National Park"
+      },
+      "new-york": {
+        "the-edge": "The Edge",
+        "luna-park": "Luna Park",
+        "the-vessel": "The Vessel",
+        "moma": "Museum of Modern Art",
+        "oculus-station": "Oculus Station",
+        "brooklyn-bridge": "Brooklyn Bridge",
+        "madame-tussauds": "Madame Tussauds",
+        "helicopter-ride": "Helicopter Ride",
+        "statue-of-liberty": "Statue of Liberty",
+        "the-met": "The Metropolitan Museum of Art",
+        "ed-sullivan-theater": "Ed Sullivan Theater",
+        "radio-city-music-hall": "Radio City Music Hall",
+        "madison-square-garden": "Madison Square Garden",
+        "one-world-observatory": "One World Observatory",
+        "st-patrick-cathedral": "St. Patrick's Cathedral",
+        "34-street-herald-sq-station": "34 Street - Herald Sq Station"
+      },
+      "bavaria-austria": {
+        "konigsee": "Konigsee",
+        "hallstatt": "Hallstatt",
+        "walchensee": "Walchensee",
+        "marienplatz": "Marienplatz",
+        "munich-residenz": "Munich Residenz",
+        "salzburg-cathedral": "Salzburg Cathedral",
+        "nymphenburg-palace": "Nymphenburg Palace",
+        "neuschwanstein-castle": "Neuschwanstein Castle",
+        "dachau-concentration-camp": "Dachau Concentration Camp",
+        "herrenchiemsee-new-palace": "Herrenchiemsee New Palace"
+      }
+    }
+  },
+  "music": {
+    "seo": {
+      "title": "Music",
+      "description": "One of my other favourite things to do is listen to music and discover new artists as well."
+    },
+    "title": "Music",
+    "topAlbumsTitle": "Most Listened Albums",
+    "topArtistsTitle": "Most Listened Artists",
+    "recentTracksTitle": "Recently Listened Tracks",
+    "playCount": "{{playCount}} plays",
+    "loadMoreAlbums": "Load more albums",
+    "loadMoreArtists": "Load more artists",
+    "streamingNow": "Streaming Now",
+    "statistics": {
+      "scrobbles": "Scrobbles",
+      "tracksLoved": "Tracks Loved",
+      "artistsListened": "Artists",
+      "albumsListened": "Albums"
+    },
+    "filters": {
+      "albums": {
+        "allTime": "All Time",
+        "last7Days": "Last 7 Days",
+        "last30Days": "Last 30 Days",
+        "last90Days": "Last 90 Days",
+        "last180Days": "Last 180 Days",
+        "last365Days": "Last 365 Days"
+      },
+      "artists": {
+        "longTerm": "Long Term",
+        "mediumTerm": "Medium Term",
+        "shortTerm": "Short Term"
+      }
+    }
+  }
+}
