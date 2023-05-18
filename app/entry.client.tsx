@@ -7,7 +7,7 @@
 import { RemixBrowser } from "@remix-run/react";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
-import { initI18next } from "./i18n/i18n.client";
+import { initI18next } from "./i18n/i18n";
 
 startTransition(() => {
   initI18next().then(() => {

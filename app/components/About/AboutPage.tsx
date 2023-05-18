@@ -31,9 +31,7 @@ export function AboutPage() {
     <MainContainer>
       <PageContainer className={styles.pageContainer}>
         <h1 className={styles.title}>{t("about.title")}</h1>
-        <div className={styles.imageWrapper}>
-          <img src="/images/about/about.jpeg" />
-        </div>
+        <img src="/images/about/about.jpeg" className={styles.imageWrapper} />
 
         <div className={styles.titleWrapper}>
           <h2 className={styles.subTitle}>{t("about.about-me")}</h2>

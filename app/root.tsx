@@ -13,6 +13,7 @@ import variables from "~/styles/variables.css";
 import globalStyles from "~/styles/global-styles.css";
 
 export const links: LinksFunction = () => [
+  { rel: "icon", href: "/favicon.jpeg" },
   { rel: "stylesheet", href: globalStyles },
   { rel: "stylesheet", href: variables },
   { rel: "preconnect", href: "https://fonts.gstatic.com" },

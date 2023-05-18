@@ -6,7 +6,7 @@ import type {
 import { json } from "@remix-run/node";
 
 import { AboutPage } from "~/components/About/AboutPage";
-import { initI18next } from "~/i18n/i18n.server";
+import { initI18next } from "~/i18n/i18n";
 
 export const loader: LoaderFunction = async ({ request }) => {
   const i18nInstance = await initI18next();
