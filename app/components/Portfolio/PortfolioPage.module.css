@@ -1,0 +1,23 @@
+.pageContainer {
+  margin: 0 auto;
+  max-width: 96rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-white);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.gridWrapper {
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 767px) {
+  .gridWrapper {
+    grid-template-columns: 1fr;
+  }
+}
