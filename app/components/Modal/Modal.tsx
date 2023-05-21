@@ -1,8 +1,8 @@
-import styles from "./Modal.module.css";
+import styles from './Modal.module.css';
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from 'framer-motion';
 
-import { CloseIcon } from "~/icons/CloseIcon";
+import { CloseIcon } from '~/icons/CloseIcon';
 
 interface ModalProps {
   open: boolean;

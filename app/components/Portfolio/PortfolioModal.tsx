@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import type { IPortfolioItem } from "./PortfolioPage";
 
-import { Modal } from "~/components/Modal/Modal";
-import { Carousel } from "~/components/Carousel/Carousel";
+import { Modal } from "~/components/modal/Modal";
+import { Carousel } from "~/components/carousel/Carousel";
 
 interface PortfolioModalProps {
   open: boolean;
@@ -22,12 +22,7 @@ export function PortfolioModal({ item, open, onClose }: PortfolioModalProps) {
         <div className={styles.modalWrapper}>
           <Carousel className={styles.carousel}>
             {item.images.map((image, index) => (
-              <img
-                src={image}
-                key={index}
-                alt={item.name}
-                className={styles.carouselItem}
-              />
+              <img src={image} key={index} alt={item.name} className={styles.carouselItem} />
             ))}
           </Carousel>
           <h1 className={styles.title}>{item.name}</h1>

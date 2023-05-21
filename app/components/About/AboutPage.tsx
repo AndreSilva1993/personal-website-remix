@@ -4,8 +4,8 @@ import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 
 import { TechnologyProgressBar } from "./TechnologyProgressBar";
-import { PageContainer } from "~/components/PageContainer/PageContainer";
-import { MainContainer } from "~/components/MainContainer/MainContainer";
+import { PageContainer } from "~/components/page-container/PageContainer";
+import { MainContainer } from "~/components/main-container/MainContainer";
 
 const GITHUB_URL = "https://github.com/AndreSilva1993";
 const LINKEDIN_URL = "https://www.linkedin.com/in/andre-emanuel/";
@@ -42,31 +42,11 @@ export function AboutPage() {
         <div className={styles.titleWrapper}>
           <h2 className={styles.subTitle}>{t("about.about-me")}</h2>
           <div className={styles.socialWrapper}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={GITHUB_URL}
-              className={styles.socialLink}
-            >
-              <img
-                width={25}
-                height={25}
-                src="/images/about/github.svg"
-                alt="GitHub"
-              />
+            <a target="_blank" rel="noreferrer" href={GITHUB_URL} className={styles.socialLink}>
+              <img width={25} height={25} src="/images/about/github.svg" alt="GitHub" />
             </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={LINKEDIN_URL}
-              className={styles.socialLink}
-            >
-              <img
-                width={25}
-                height={25}
-                src="/images/about/linkedin.svg"
-                alt="LinkedIn"
-              />
+            <a target="_blank" rel="noreferrer" href={LINKEDIN_URL} className={styles.socialLink}>
+              <img width={25} height={25} src="/images/about/linkedin.svg" alt="LinkedIn" />
             </a>
           </div>
         </div>

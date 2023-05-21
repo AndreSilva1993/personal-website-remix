@@ -1,9 +1,9 @@
-import styles from "./PortfolioItem.module.css";
+import styles from './PortfolioItem.module.css';
 
-import classNames from "classnames";
-import { useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { useAnimation, motion } from "framer-motion";
+import classNames from 'classnames';
+import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useAnimation, motion } from 'framer-motion';
 
 interface PortfolioItemProps {
   index: number;
@@ -13,15 +13,9 @@ interface PortfolioItemProps {
   onClick: (index: number) => void;
 }
 
-type AnimationDirection = "left" | "right" | "top" | "bottom";
+type AnimationDirection = 'left' | 'right' | 'top' | 'bottom';
 
-export function PortfolioItem({
-  name,
-  image,
-  index,
-  logoImage,
-  onClick,
-}: PortfolioItemProps) {
+export function PortfolioItem({ name, image, index, logoImage, onClick }: PortfolioItemProps) {
   const { t } = useTranslation();
   const controls = useAnimation();
   const wrapperRef = useRef<HTMLDivElement | null>(null);
@@ -36,28 +30,26 @@ export function PortfolioItem({
       value: number;
       direction: AnimationDirection;
     }> = [
-      { direction: "top", value: y - clientY },
-      { direction: "left", value: x - clientX },
-      { direction: "right", value: x + width - clientX },
-      { direction: "bottom", value: y + height - clientY },
+      { direction: 'top', value: y - clientY },
+      { direction: 'left', value: x - clientX },
+      { direction: 'right', value: x + width - clientX },
+      { direction: 'bottom', value: y + height - clientY },
     ];
 
     const { direction } = elementBounds.reduce((closestBound, bound) =>
-      Math.abs(bound.value) < Math.abs(closestBound.value)
-        ? bound
-        : closestBound
+      Math.abs(bound.value) < Math.abs(closestBound.value) ? bound : closestBound
     );
 
     switch (direction) {
-      case "right":
-        return { x: "100%", y: 0 };
-      case "top":
-        return { y: "-100%", x: 0 };
-      case "bottom":
-        return { y: "100%", x: 0 };
-      case "left":
+      case 'right':
+        return { x: '100%', y: 0 };
+      case 'top':
+        return { y: '-100%', x: 0 };
+      case 'bottom':
+        return { y: '100%', x: 0 };
+      case 'left':
       default:
-        return { x: "-100%", y: 0 };
+        return { x: '-100%', y: 0 };
     }
   }
 
@@ -83,12 +75,12 @@ export function PortfolioItem({
       onMouseLeave={handleItemMouseLeave}
       onMouseEnter={handleItemMouseEnter}
       animate={{ x: 0, opacity: 1 }}
-      initial={{ x: "-10rem", opacity: 0 }}
-      transition={{ duration: 1, ease: "easeOut", delay: 0.25 * index }}
+      initial={{ x: '-10rem', opacity: 0 }}
+      transition={{ duration: 1, ease: 'easeOut', delay: 0.25 * index }}
     >
       <img
         src={image}
-        alt={t(name) || ""}
+        alt={t(name) || ''}
         className={classNames(styles.itemImage, {
           [styles.itemImageHovering]: isHovering,
         })}
@@ -98,14 +90,10 @@ export function PortfolioItem({
         animate={controls}
         onClick={handleItemClick}
         className={styles.itemOverlayWrapper}
-        initial={{ x: "-100%", y: 0 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        initial={{ x: '-100%', y: 0 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
       >
-        <img
-          src={logoImage}
-          alt={t(name) || ""}
-          className={styles.itemOverlayImage}
-        />
+        <img src={logoImage} alt={t(name) || ''} className={styles.itemOverlayImage} />
       </motion.div>
     </motion.div>
   );

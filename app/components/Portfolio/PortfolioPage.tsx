@@ -3,10 +3,10 @@ import styles from "./PortfolioPage.module.css";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { PortfolioItem } from "~/components/Portfolio/PortfolioItem";
-import { PortfolioModal } from "~/components/Portfolio/PortfolioModal";
-import { PageContainer } from "~/components/PageContainer/PageContainer";
-import { MainContainer } from "../MainContainer/MainContainer";
+import { PortfolioItem } from "~/components/portfolio/PortfolioItem";
+import { PortfolioModal } from "~/components/portfolio/PortfolioModal";
+import { PageContainer } from "~/components/page-container/PageContainer";
+import { MainContainer } from "~/components/main-container/MainContainer";
 
 export interface IPortfolioItem {
   name: string;
@@ -47,20 +47,14 @@ const PORTFOLIO_ITEMS: IPortfolioItem[] = [
     description: "portfolio.items.tankey",
     logoImage: "/images/portfolio/tankey/logo.webp",
     mainImage: "/images/portfolio/tankey/1.webp",
-    images: [
-      "/images/portfolio/tankey/1.webp",
-      "/images/portfolio/tankey/2.webp",
-    ],
+    images: ["/images/portfolio/tankey/1.webp", "/images/portfolio/tankey/2.webp"],
   },
   {
     name: "TOConline",
     description: "portfolio.items.toconline",
     logoImage: "/images/portfolio/toconline/logo.webp",
     mainImage: "/images/portfolio/toconline/1.webp",
-    images: [
-      "/images/portfolio/toconline/1.webp",
-      "/images/portfolio/toconline/2.webp",
-    ],
+    images: ["/images/portfolio/toconline/1.webp", "/images/portfolio/toconline/2.webp"],
   },
 ];
 
