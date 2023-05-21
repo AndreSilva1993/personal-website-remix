@@ -21,7 +21,7 @@ export function LeafletMap({ coordinates }: LeafletMapProps) {
       scrollWheelZoom: false,
       layers: [
         L.tileLayer(
-          `https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key=${process.env.NEXT_PUBLIC_STADIA_MAP_API_KEY}`
+          `https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key=${window.ENV.STADIA_MAP_API_KEY}`
         ),
       ],
     });

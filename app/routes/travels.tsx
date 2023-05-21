@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { json } from '@remix-run/node';
 import type { LoaderFunction, V2_MetaFunction } from '@remix-run/node';
 
@@ -19,6 +18,6 @@ export const meta: V2_MetaFunction = ({ data }) => {
   return [{ title: data.seoTitle }, { name: 'description', content: data.seoDescription }];
 };
 
-export default function Portfolio() {
+export default function Travels() {
   return <TravelsPage />;
 }
