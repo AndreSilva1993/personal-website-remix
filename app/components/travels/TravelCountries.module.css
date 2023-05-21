@@ -1,0 +1,32 @@
+.countriesList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  color: var(--color-white);
+  justify-content: center;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 1rem 1.5rem;
+
+  width: 5rem;
+  height: 5rem;
+}
+
+.countryBorder {
+  top: -1rem;
+  left: -1rem;
+  position: absolute;
+  width: calc(100% + 2rem);
+  height: calc(100% + 2rem);
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.countryImage {
+  height: 5rem;
+}

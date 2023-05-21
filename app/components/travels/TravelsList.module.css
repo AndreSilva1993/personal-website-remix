@@ -1,0 +1,73 @@
+.travelsList {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.travelItem {
+  height: 46rem;
+  border-radius: 1rem;
+  flex: 0 0 calc(40% - 1rem);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.travelItem:hover .travelItemImage {
+  transform: scale(1.1);
+}
+
+.travelItemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.travelName {
+  color: white;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.travelName::after {
+  content: "";
+  width: 5rem;
+  height: 0.2rem;
+  margin-top: 1.5rem;
+  background-color: var(--color-white);
+  transition: transform 300ms ease;
+}
+
+.travelName:hover::after {
+  transform: scaleX(1.5);
+}
+
+@media only screen and (max-width: 767px) {
+  .travelItem {
+    flex: 0 0 100%;
+    height: 20rem;
+    padding: 1rem 0;
+  }
+
+  .travelName {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .travelItem:nth-of-type(4n + 1),
+  .travelItem:nth-of-type(4n + 4) {
+    flex: 0 0 calc(60% - 1rem);
+  }
+}
