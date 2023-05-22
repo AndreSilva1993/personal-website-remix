@@ -1,5 +1,4 @@
 import 'leaflet/dist/leaflet.css';
-import styles from './LeafletMap.module.css';
 
 import L from 'leaflet';
 import { useRef, useEffect, useState } from 'react';
@@ -52,5 +51,5 @@ export function LeafletMap({ coordinates }: LeafletMapProps) {
     );
   }, [leafletMap, coordinates]);
 
-  return <div className={styles.mapContainer} id="map-container" ref={leafletMapContainerRef} />;
+  return <div className="mapContainer" id="map-container" ref={leafletMapContainerRef} />;
 }

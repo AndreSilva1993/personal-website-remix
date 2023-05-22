@@ -1,5 +1,3 @@
-import styles from './TravelItem.module.css';
-
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '~/components/button/Button';
 import { Masonry, MasonryItem } from '~/components/masonry/Masonry';
 
-import type { ITravel } from './TravelsPage';
+import type { ITravel } from './Travel.types';
 
 interface TravelItemProps {
   travel: ITravel;
@@ -28,21 +26,17 @@ export function TravelItem({ travel, onGoBackButtonClick }: TravelItemProps) {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className={styles.travelHeadingWrapper}>
-        <h2 className={styles.travelName}>{travel.name}</h2>
+      <div className="travelItemHeading">
+        <h2 className="travelItemName">{travel.name}</h2>
 
         <Button onClick={onGoBackButtonClick}>{t('common.goBack')}</Button>
       </div>
       <Masonry>
         {placesImages.map(({ url, landscape, name }, index) => (
           <MasonryItem landscape={landscape} key={index}>
-            <div
-              className={classNames(styles.imageWrapper, {
-                [styles.imageLandscapeWrapper]: landscape,
-              })}
-            >
+            <div className={classNames('travelItemImageWrapper', { landscape })}>
               <img src={url} alt={name} />
-              <p className={styles.imageTitle}>{t(name)}</p>
+              <p className="travelItemImageTitle">{t(name)}</p>
             </div>
           </MasonryItem>
         ))}
