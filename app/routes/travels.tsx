@@ -1,10 +1,10 @@
 import { json } from '@remix-run/node';
-import type { LoaderFunction, V2_MetaFunction } from '@remix-run/node';
+import type { V2_MetaFunction } from '@remix-run/node';
 
 import { initI18next } from '~/i18n/i18n';
 import { TravelsPage } from '~/components/travels/TravelsPage';
 
-export const loader: LoaderFunction = async () => {
+export const loader = async () => {
   const i18nInstance = await initI18next();
   const t = i18nInstance.getFixedT('en');
 

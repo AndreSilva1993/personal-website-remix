@@ -1,5 +1,5 @@
 import { cssBundleHref } from '@remix-run/css-bundle';
-import { LinksFunction, LoaderFunction, json } from '@remix-run/node';
+import { LinksFunction, json } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -25,10 +25,10 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ];
 
-export const loader: LoaderFunction = () => {
+export const loader = () => {
   return json({
     ENV: {
-      STADIA_MAP_API_KEY: process.env.STADIA_MAP_API_KEY,
+      STADIA_MAP_API_KEY: process.env.STADIA_MAP_API_KEY || '',
     },
   });
 };

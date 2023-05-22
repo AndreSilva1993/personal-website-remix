@@ -56,9 +56,15 @@
   align-items: center;
 }
 
+.progressBarWrapper {
+  width: 100%;
+  background-color: var(--color-grey);
+}
+
 .progressBar {
   width: 100%;
   height: 0.5rem;
+  background-color: var(--color-white);
 }
 
 @media only screen and (max-width: 767px) {
