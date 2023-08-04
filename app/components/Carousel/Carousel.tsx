@@ -1,11 +1,11 @@
-import styles from "./Carousel.module.css";
+import styles from './Carousel.module.css';
 
-import classNames from "classnames";
-import { useAnimation, motion } from "framer-motion";
-import { useEffect, useState, Children, useRef, ReactNode } from "react";
+import classNames from 'classnames';
+import { useAnimation, motion } from 'framer-motion';
+import { useEffect, useState, Children, useRef, type ReactNode } from 'react';
 
-import { ChevronLeftIcon } from "~/icons/ChevronLeftIcon";
-import { ChevronRightIcon } from "~/icons/ChevronRightIcon";
+import { ChevronLeftIcon } from '~/icons/ChevronLeftIcon';
+import { ChevronRightIcon } from '~/icons/ChevronRightIcon';
 
 interface CarouselProps {
   children?: ReactNode;
@@ -38,7 +38,7 @@ export function Carousel({
 
     controls.start({
       x: `-${100 * carouselIndex}%`,
-      transition: { ease: "easeOut", duration: 0.5 },
+      transition: { ease: 'easeOut', duration: 0.5 },
     });
   }, [carouselIndex]);
 
@@ -49,8 +49,7 @@ export function Carousel({
 
   function handleWrapperTouchMove(event: React.TouchEvent<HTMLDivElement>) {
     const swipePercentage =
-      ((swipeRef.current.startX - event.touches[0].clientX) /
-        wrapperRef.current!.offsetWidth) *
+      ((swipeRef.current.startX - event.touches[0].clientX) / wrapperRef.current!.offsetWidth) *
       100;
 
     swipeRef.current = {
@@ -60,10 +59,7 @@ export function Carousel({
     };
 
     const clampedValue = Math.max(
-      Math.min(
-        100 * carouselIndex + swipePercentage,
-        100 * (Children.count(children) - 1)
-      ),
+      Math.min(100 * carouselIndex + swipePercentage, 100 * (Children.count(children) - 1)),
       0
     );
 
@@ -75,9 +71,7 @@ export function Carousel({
 
     if (swipeRef.current.shouldGoToNextSlide) {
       setCarouselIndex((previousIndex) =>
-        previousIndex === Children.count(children) - 1
-          ? previousIndex
-          : previousIndex + 1
+        previousIndex === Children.count(children) - 1 ? previousIndex : previousIndex + 1
       );
     } else if (swipeRef.current.shouldGoToPreviousSlide) {
       setCarouselIndex((previousIndex) =>
@@ -86,7 +80,7 @@ export function Carousel({
     } else {
       controls.start({
         x: `-${100 * carouselIndex}%`,
-        transition: { ease: "easeOut", duration: 0.5 },
+        transition: { ease: 'easeOut', duration: 0.5 },
       });
     }
   }
@@ -111,11 +105,7 @@ export function Carousel({
       onTouchMove={handleWrapperTouchMove}
       onTouchStart={handleWrapperTouchStart}
     >
-      <motion.div
-        className={styles.carouselItemsWrapper}
-        animate={controls}
-        initial={{ x: 0 }}
-      >
+      <motion.div className={styles.carouselItemsWrapper} animate={controls} initial={{ x: 0 }}>
         {Children.map(children, (item, index) => (
           <div className={styles.carouselItem} key={index}>
             {item}
@@ -124,41 +114,30 @@ export function Carousel({
       </motion.div>
 
       <ul className={styles.paginationWrapper}>
-        {Array.from({ length: Children.count(children) }).map(
-          (_item, index) => (
-            <li
-              key={index}
-              onClick={() => handlePaginationItemClick(index)}
-              className={classNames(styles.paginationItem, {
-                [styles.paginationItemActive]: carouselIndex === index,
-              })}
-            />
-          )
-        )}
+        {Array.from({ length: Children.count(children) }).map((_item, index) => (
+          <li
+            key={index}
+            onClick={() => handlePaginationItemClick(index)}
+            className={classNames(styles.paginationItem, {
+              [styles.paginationItemActive]: carouselIndex === index,
+            })}
+          />
+        ))}
       </ul>
 
       <div
         onClick={handleChevronLeftClick}
-        className={classNames(
-          styles.chevronWrapper,
-          styles.chevronWrapperLeft,
-          {
-            [styles.chevronWrapperDisabled]: carouselIndex === 0,
-          }
-        )}
+        className={classNames(styles.chevronWrapper, styles.chevronWrapperLeft, {
+          [styles.chevronWrapperDisabled]: carouselIndex === 0,
+        })}
       >
         <ChevronLeftIcon className={styles.chevron} />
       </div>
       <div
         onClick={handleChevronRightClick}
-        className={classNames(
-          styles.chevronWrapper,
-          styles.chevronWrapperRight,
-          {
-            [styles.chevronWrapperDisabled]:
-              carouselIndex === Children.count(children) - 1,
-          }
-        )}
+        className={classNames(styles.chevronWrapper, styles.chevronWrapperRight, {
+          [styles.chevronWrapperDisabled]: carouselIndex === Children.count(children) - 1,
+        })}
       >
         <ChevronRightIcon className={styles.chevron} />
       </div>

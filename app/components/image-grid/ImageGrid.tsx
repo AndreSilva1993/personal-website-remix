@@ -1,6 +1,6 @@
 import styles from './ImageGrid.module.css';
 
-import { useRef, useState, ReactElement, RefCallback } from 'react';
+import { useRef, useState, type ReactElement, type RefCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ImageGridProps {

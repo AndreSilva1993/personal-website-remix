@@ -1,9 +1,8 @@
 import styles from './MobileNavigationMenu.module.css';
 
-import { Link } from '@remix-run/react';
+import { Link, useLocation } from '@remix-run/react';
 import { useState } from 'react';
 import classNames from 'classnames';
-import { useLocation } from '@remix-run/react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { MenuIcon } from '~/icons/MenuIcon';

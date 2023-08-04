@@ -1,6 +1,6 @@
 import styles from '~/styles/travels.css';
 
-import { Suspense, useMemo, useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import { json } from '@remix-run/node';
@@ -40,14 +40,12 @@ export default function Travels() {
   const { t } = useTranslation();
   const { travels } = useLoaderData<typeof loader>();
 
-  const [selectedTravel, setSelectedTravel] = useState<typeof travels[0]>();
+  const [selectedTravel, setSelectedTravel] = useState<(typeof travels)[0]>();
 
-  const countries = useMemo(() => {
-    return travels
-      .map(({ countryCodes }) => countryCodes)
-      .flat()
-      .filter((country, index, array) => array.indexOf(country) === index);
-  }, []);
+  const countries = travels
+    .map(({ countryCodes }) => countryCodes)
+    .flat()
+    .filter((country, index, array) => array.indexOf(country) === index);
 
   const mapCoordinates = selectedTravel
     ? selectedTravel.places.map(({ coordinates }) => coordinates as L.LatLngExpression)

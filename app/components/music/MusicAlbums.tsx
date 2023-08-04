@@ -47,7 +47,6 @@ export function MusicAlbums({ initialTopAlbums }: MusicAlbumsProps) {
           className={styles.searchSelect}
           onChange={(event) => {
             setPage(1);
-
             setTimePeriod(event.target.value as LastFMTimePeriod);
           }}
         >

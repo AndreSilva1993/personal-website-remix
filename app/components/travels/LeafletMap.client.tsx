@@ -8,7 +8,7 @@ interface LeafletMapProps {
 }
 
 export function LeafletMap({ coordinates }: LeafletMapProps) {
-  const leafletMapContainerRef = useRef<HTMLDivElement | null>(null);
+  const leafletMapContainer = useRef<HTMLDivElement | null>(null);
   const leafletMarkersLayerGroup = useRef<L.LayerGroup>();
 
   const [leafletMap, setLeafletMap] = useState<L.Map>();
@@ -31,7 +31,7 @@ export function LeafletMap({ coordinates }: LeafletMapProps) {
     return () => {
       newLeafletMap.remove();
     };
-  }, []);
+  }, [coordinates]);
 
   useEffect(() => {
     if (!leafletMap) return;
@@ -51,5 +51,5 @@ export function LeafletMap({ coordinates }: LeafletMapProps) {
     );
   }, [leafletMap, coordinates]);
 
-  return <div className="mapContainer" id="map-container" ref={leafletMapContainerRef} />;
+  return <div className="mapContainer" id="map-container" ref={leafletMapContainer} />;
 }
