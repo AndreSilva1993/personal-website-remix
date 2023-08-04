@@ -1,11 +1,11 @@
-import { PassThrough } from "node:stream";
+import { PassThrough } from 'node:stream';
 
-import type { EntryContext } from "@remix-run/node";
-import { Response } from "@remix-run/node";
-import { RemixServer } from "@remix-run/react";
-import { renderToPipeableStream } from "react-dom/server";
+import type { EntryContext } from '@remix-run/node';
+import { Response } from '@remix-run/node';
+import { RemixServer } from '@remix-run/react';
+import { renderToPipeableStream } from 'react-dom/server';
 
-import { initI18next } from "./i18n/i18n";
+import { initI18next } from './i18n/i18n';
 
 const ABORT_DELAY = 5_000;
 
@@ -15,20 +15,15 @@ export default async function handleBrowserRequest(
   responseHeaders: Headers,
   remixContext: EntryContext
 ) {
-  const i18nInstance = await initI18next();
+  await initI18next();
 
   return new Promise((resolve, reject) => {
     const { pipe, abort } = renderToPipeableStream(
-      <RemixServer
-        context={remixContext}
-        url={request.url}
-        abortDelay={ABORT_DELAY}
-      />,
+      <RemixServer context={remixContext} url={request.url} abortDelay={ABORT_DELAY} />,
       {
         onShellReady() {
           const body = new PassThrough();
-
-          responseHeaders.set("Content-Type", "text/html");
+          responseHeaders.set('Content-Type', 'text/html');
 
           resolve(
             new Response(body, {

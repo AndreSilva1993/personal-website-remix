@@ -1,9 +1,10 @@
 import styles from '~/styles/travels.css';
 
 import { Suspense, useMemo, useState } from 'react';
-import { json } from '@remix-run/node';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
+import { json } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
 import type { V2_MetaFunction, LinksFunction } from '@remix-run/node';
 
 import travels from '~/components/travels/travels.json';
@@ -14,7 +15,6 @@ import { LeafletMap } from '~/components/travels/LeafletMap.client';
 import { TravelCountries } from '~/components/travels/TravelCountries';
 import { MainContainer } from '~/components/main-container/MainContainer';
 import { PageContainer } from '~/components/page-container/PageContainer';
-import { useLoaderData } from '@remix-run/react';
 
 export const meta: V2_MetaFunction = ({ data }) => {
   return [{ title: data.seoTitle }, { name: 'description', content: data.seoDescription }];
