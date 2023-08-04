@@ -29,13 +29,13 @@ export function MusicAlbums({ initialTopAlbums }: MusicAlbumsProps) {
   }, [page, timePeriod]);
 
   useEffect(() => {
-    if (!fetcher.data) return;
+    setTopAlbums((previousTopAlbums) => {
+      if (!fetcher.data) return previousTopAlbums;
 
-    setTopAlbums((previousTopAlbums) =>
-      fetcher.data.page === 1
+      return fetcher.data.page === 1
         ? fetcher.data.topAlbums
-        : [...previousTopAlbums, ...fetcher.data.topAlbums]
-    );
+        : [...previousTopAlbums, ...fetcher.data.topAlbums];
+    });
   }, [fetcher.data]);
 
   return (
@@ -47,6 +47,7 @@ export function MusicAlbums({ initialTopAlbums }: MusicAlbumsProps) {
           className={styles.searchSelect}
           onChange={(event) => {
             setPage(1);
+
             setTimePeriod(event.target.value as LastFMTimePeriod);
           }}
         >
