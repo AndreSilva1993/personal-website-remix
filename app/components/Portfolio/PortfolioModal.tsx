@@ -1,15 +1,19 @@
-import styles from "./PortfolioModal.module.css";
+import styles from './PortfolioModal.module.css';
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import type { IPortfolioItem } from "./PortfolioPage";
-
-import { Modal } from "~/components/modal/Modal";
-import { Carousel } from "~/components/carousel/Carousel";
+import { Modal } from '~/components/modal/Modal';
+import { Carousel } from '~/components/carousel/Carousel';
 
 interface PortfolioModalProps {
   open: boolean;
-  item?: IPortfolioItem;
+  item?: {
+    name: string;
+    description: string;
+    logoImage: string;
+    mainImage: string;
+    images: string[];
+  };
   onClose: VoidFunction;
 }
 
