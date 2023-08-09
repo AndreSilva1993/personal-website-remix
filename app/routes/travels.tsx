@@ -40,7 +40,7 @@ export default function Travels() {
   const { t } = useTranslation();
   const { travels } = useLoaderData<typeof loader>();
 
-  const [selectedTravel, setSelectedTravel] = useState<(typeof travels)[0]>();
+  const [selectedTravel, setSelectedTravel] = useState<(typeof travels)[number]>();
 
   const countries = travels
     .map(({ countryCodes }) => countryCodes)

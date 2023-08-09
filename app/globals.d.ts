@@ -7,6 +7,8 @@ interface Window {
 
 namespace NodeJS {
   interface ProcessEnv {
+    STADIA_MAP_API_KEY: string;
+
     UPSTASH_REDIS_URL: string;
     UPSTASH_REDIS_TOKEN: string;
 

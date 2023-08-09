@@ -37,8 +37,6 @@ export function MusicArtists({ initialTopArtists }: MusicArtistsProps) {
     });
   }, [fetcher.data]);
 
-  console.log(topArtists);
-
   return (
     <section>
       <div className={styles.searchOptionsWrapper}>

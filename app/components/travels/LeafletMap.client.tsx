@@ -31,7 +31,7 @@ export function LeafletMap({ coordinates }: LeafletMapProps) {
     return () => {
       newLeafletMap.remove();
     };
-  }, [coordinates]);
+  }, []);
 
   useEffect(() => {
     if (!leafletMap) return;

@@ -6,7 +6,7 @@ import type {
   SpotifyTopArtistsResponse,
 } from './spotify.types';
 
-export async function getSpotifyAccessToken() {
+async function getSpotifyAccessToken() {
   const { get, set, expire, exists } = new Redis({
     url: process.env.UPSTASH_REDIS_URL,
     token: process.env.UPSTASH_REDIS_TOKEN,

@@ -28,7 +28,7 @@ export const links: LinksFunction = () => [
 export const loader = () => {
   return json({
     ENV: {
-      STADIA_MAP_API_KEY: process.env.STADIA_MAP_API_KEY || '',
+      STADIA_MAP_API_KEY: process.env.STADIA_MAP_API_KEY,
     },
   });
 };
