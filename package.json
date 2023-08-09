@@ -34,9 +34,5 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.2.3",
     "typescript": "^5.0.4"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "packageManager": "yarn@3.6.1"
+  }
 }
