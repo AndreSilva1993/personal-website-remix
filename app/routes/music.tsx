@@ -1,4 +1,4 @@
-import styles from '~/styles/travels.css';
+import styles from '~/styles/music.css';
 
 import { json } from '@remix-run/node';
 import { useTranslation } from 'react-i18next';
