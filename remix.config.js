@@ -1,7 +1,6 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
   ignoredRouteFiles: ['**/.*'],
-  serverBuildPath: 'api/index.js',
   future: {
     v2_dev: true,
     v2_meta: true,

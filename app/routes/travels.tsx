@@ -20,10 +20,7 @@ export const meta: V2_MetaFunction = ({ data }) => {
   return [{ title: data.seoTitle }, { name: 'description', content: data.seoDescription }];
 };
 
-export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: styles },
-  { rel: 'preload', href: '/images/about/about.jpeg', as: 'image' },
-];
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
 export const loader = async () => {
   const i18nInstance = await initI18next();

@@ -18,7 +18,7 @@ export function TravelList({ travels, onTravelClick }: TravelListItemProps) {
       <ul className="travelList">
         {travels.map(({ name, image }, index) => (
           <li className="travelListItem" key={name} onClick={() => onTravelClick(index)}>
-            <img src={image} alt={name} className="travelListItemImage" />
+            <img src={image} alt={name} loading="lazy" className="travelListItemImage" />
             <span className="travelListItemName">{name}</span>
           </li>
         ))}
