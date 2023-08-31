@@ -1,8 +1,8 @@
 import styles from './MusicArtists.module.css';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useFetcher } from '@remix-run/react';
+import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { Select } from '~/components/select/Select';
 import { Button } from '~/components/button/Button';
@@ -18,24 +18,27 @@ interface MusicArtistsProps {
 export function MusicArtists({ initialTopArtists }: MusicArtistsProps) {
   const { t } = useTranslation();
 
-  const fetcher = useFetcher<{ page: Number; topArtists: SpotifyTopArtist[] }>();
-  const [page, setPage] = useState(1);
   const [timeRange, setTimeRange] = useState<SpotifyTimeRange>('long_term');
-  const [topArtists, setTopArtists] = useState(initialTopArtists);
 
-  useEffect(() => {
-    fetcher.load(`/api/spotify-top-artists?page=${page}&timeRange=${timeRange}`);
-  }, [page, timeRange]);
+  const {
+    data = { pages: [] },
+    isFetching,
+    fetchNextPage,
+  } = useInfiniteQuery<{ page: number; topArtists: SpotifyTopArtist[] }>({
+    queryKey: ['music-top-artists', timeRange],
+    queryFn: async ({ pageParam = 1 }) => {
+      const response = await fetch(
+        `/api/spotify-top-artists?page=${pageParam}&timeRange=${timeRange}`
+      );
 
-  useEffect(() => {
-    setTopArtists((previousTopArtists) => {
-      if (!fetcher.data) return previousTopArtists;
-
-      return fetcher.data.page === 1
-        ? fetcher.data.topArtists
-        : [...previousTopArtists, ...fetcher.data.topArtists];
-    });
-  }, [fetcher.data]);
+      return response.json();
+    },
+    getNextPageParam: ({ page }) => page + 1,
+    initialData: {
+      pageParams: [],
+      pages: [{ page: 1, topArtists: initialTopArtists }],
+    },
+  });
 
   return (
     <section>
@@ -45,7 +48,6 @@ export function MusicArtists({ initialTopArtists }: MusicArtistsProps) {
           value={timeRange}
           className={styles.searchSelect}
           onChange={(event) => {
-            setPage(1);
             setTimeRange(event.target.value as SpotifyTimeRange);
           }}
         >
@@ -56,7 +58,7 @@ export function MusicArtists({ initialTopArtists }: MusicArtistsProps) {
       </div>
 
       <ImageGrid
-        items={topArtists}
+        items={data.pages.map(({ topArtists }) => topArtists).flat()}
         render={({ image, name }: SpotifyTopArtist, renderProps) => (
           <div className={styles.artistImageWrapper} key={name} {...renderProps}>
             <img
@@ -75,8 +77,8 @@ export function MusicArtists({ initialTopArtists }: MusicArtistsProps) {
         )}
       />
 
-      <Button className={styles.button} onClick={() => setPage((previousPage) => previousPage + 1)}>
-        {fetcher.state === 'loading' ? <LoadingDots /> : t('music.loadMoreArtists')}
+      <Button className={styles.button} onClick={() => fetchNextPage()}>
+        {isFetching ? <LoadingDots /> : t('music.loadMoreArtists')}
       </Button>
     </section>
   );

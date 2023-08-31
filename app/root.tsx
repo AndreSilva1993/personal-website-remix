@@ -12,6 +12,8 @@ import {
 
 import variables from '~/styles/variables.css';
 import globalStyles from '~/styles/global-styles.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useState } from 'react';
 
 export const links: LinksFunction = () => [
   { rel: 'icon', href: '/favicon.png' },
@@ -35,6 +37,7 @@ export const loader = () => {
 
 export default function App() {
   const loaderData = useLoaderData<typeof loader>();
+  const [queryClient] = useState(new QueryClient());
 
   return (
     <html lang="en">
@@ -45,7 +48,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <QueryClientProvider client={queryClient}>
+          <Outlet />
+        </QueryClientProvider>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.ENV = ${JSON.stringify(loaderData.ENV)}`,
