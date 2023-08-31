@@ -21,7 +21,7 @@ export function MusicRecentTracks({ initialRecentTracks }: MusicRecentTracksProp
       <h2 className={styles.title}>{t('music.recentTracksTitle')}</h2>
       <div className={styles.recentTracksWrapper}>
         {initialRecentTracks.map(({ image, artist, name, album, unixTimestamp }) => (
-          <Fragment key={unixTimestamp}>
+          <Fragment key={`${artist}-${name}-${unixTimestamp}`}>
             <div className={styles.recentTrackCoverWrapper}>
               <img src={image} alt={album} width="35" height="35" />
             </div>
