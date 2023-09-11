@@ -919,14 +919,14 @@
   {
     "slug": "new-york",
     "name": "New York",
-    "image": "/images/travels/new-york/helicopter-ride-1.jpeg",
+    "image": "/images/travels/new-york/helicopter-ride-1.webp",
     "countryCodes": ["us"],
     "places": [
       {
         "name": "travels.places.new-york.brooklyn-bridge",
         "images": [
           {
-            "url": "/images/travels/new-york/brooklyn-bridge-1.jpeg",
+            "url": "/images/travels/new-york/brooklyn-bridge-1.webp",
             "landscape": false
           }
         ],
@@ -936,7 +936,7 @@
         "name": "travels.places.new-york.one-world-observatory",
         "images": [
           {
-            "url": "/images/travels/new-york/one-world-observatory-1.jpeg",
+            "url": "/images/travels/new-york/one-world-observatory-1.webp",
             "landscape": false
           }
         ],
@@ -946,15 +946,15 @@
         "name": "travels.places.new-york.helicopter-ride",
         "images": [
           {
-            "url": "/images/travels/new-york/helicopter-ride-1.jpeg",
+            "url": "/images/travels/new-york/helicopter-ride-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/helicopter-ride-2.jpeg",
+            "url": "/images/travels/new-york/helicopter-ride-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/helicopter-ride-3.jpeg",
+            "url": "/images/travels/new-york/helicopter-ride-3.webp",
             "landscape": false
           }
         ],
@@ -964,15 +964,15 @@
         "name": "travels.places.new-york.moma",
         "images": [
           {
-            "url": "/images/travels/new-york/moma-1.jpeg",
+            "url": "/images/travels/new-york/moma-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/moma-2.jpeg",
+            "url": "/images/travels/new-york/moma-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/moma-3.jpeg",
+            "url": "/images/travels/new-york/moma-3.webp",
             "landscape": true
           }
         ],
@@ -982,11 +982,11 @@
         "name": "travels.places.new-york.oculus-station",
         "images": [
           {
-            "url": "/images/travels/new-york/oculus-station-1.jpeg",
+            "url": "/images/travels/new-york/oculus-station-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/oculus-station-2.jpeg",
+            "url": "/images/travels/new-york/oculus-station-2.webp",
             "landscape": false
           }
         ],
@@ -996,19 +996,19 @@
         "name": "travels.places.new-york.the-met",
         "images": [
           {
-            "url": "/images/travels/new-york/the-met-1.jpeg",
+            "url": "/images/travels/new-york/the-met-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/the-met-2.jpeg",
+            "url": "/images/travels/new-york/the-met-2.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/new-york/the-met-3.jpeg",
+            "url": "/images/travels/new-york/the-met-3.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/the-met-4.jpeg",
+            "url": "/images/travels/new-york/the-met-4.webp",
             "landscape": true
           }
         ],
@@ -1018,7 +1018,7 @@
         "name": "travels.places.new-york.madison-square-garden",
         "images": [
           {
-            "url": "/images/travels/new-york/madison-square-garden.jpeg",
+            "url": "/images/travels/new-york/madison-square-garden-1.webp",
             "landscape": true
           }
         ],
@@ -1028,11 +1028,11 @@
         "name": "travels.places.new-york.the-vessel",
         "images": [
           {
-            "url": "/images/travels/new-york/the-vessel-1.jpeg",
+            "url": "/images/travels/new-york/the-vessel-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/the-vessel-2.jpeg",
+            "url": "/images/travels/new-york/the-vessel-2.webp",
             "landscape": false
           }
         ],
@@ -1042,7 +1042,7 @@
         "name": "travels.places.new-york.radio-city-music-hall",
         "images": [
           {
-            "url": "/images/travels/new-york/radio-city-music-hall.jpeg",
+            "url": "/images/travels/new-york/radio-city-music-hall-1.webp",
             "landscape": false
           }
         ],
@@ -1052,11 +1052,11 @@
         "name": "travels.places.new-york.the-edge",
         "images": [
           {
-            "url": "/images/travels/new-york/the-edge-1.jpeg",
+            "url": "/images/travels/new-york/the-edge-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/the-edge-2.jpeg",
+            "url": "/images/travels/new-york/the-edge-2.webp",
             "landscape": false
           }
         ],
@@ -1066,7 +1066,7 @@
         "name": "travels.places.new-york.34-street-herald-sq-station",
         "images": [
           {
-            "url": "/images/travels/new-york/34-street-herald-sq-station.jpeg",
+            "url": "/images/travels/new-york/34-street-herald-sq-station-1.webp",
             "landscape": false
           }
         ],
@@ -1076,7 +1076,7 @@
         "name": "travels.places.new-york.statue-of-liberty",
         "images": [
           {
-            "url": "/images/travels/new-york/statue-of-liberty.jpeg",
+            "url": "/images/travels/new-york/statue-of-liberty-1.webp",
             "landscape": false
           }
         ],
@@ -1086,15 +1086,15 @@
         "name": "travels.places.new-york.madame-tussauds",
         "images": [
           {
-            "url": "/images/travels/new-york/madame-tussauds-1.jpeg",
+            "url": "/images/travels/new-york/madame-tussauds-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/madame-tussauds-2.jpeg",
+            "url": "/images/travels/new-york/madame-tussauds-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/new-york/madame-tussauds-3.jpeg",
+            "url": "/images/travels/new-york/madame-tussauds-3.webp",
             "landscape": false
           }
         ],
@@ -1104,7 +1104,7 @@
         "name": "travels.places.new-york.ed-sullivan-theater",
         "images": [
           {
-            "url": "/images/travels/new-york/ed-sullivan-theater.jpeg",
+            "url": "/images/travels/new-york/ed-sullivan-theater-1.webp",
             "landscape": false
           }
         ],
@@ -1114,7 +1114,7 @@
         "name": "travels.places.new-york.st-patrick-cathedral",
         "images": [
           {
-            "url": "/images/travels/new-york/st-patrick-cathedral.jpeg",
+            "url": "/images/travels/new-york/st-patrick-cathedral-1.webp",
             "landscape": false
           }
         ],
@@ -1124,7 +1124,7 @@
         "name": "travels.places.new-york.luna-park",
         "images": [
           {
-            "url": "/images/travels/new-york/luna-park.jpeg",
+            "url": "/images/travels/new-york/luna-park-1.webp",
             "landscape": false
           }
         ],
