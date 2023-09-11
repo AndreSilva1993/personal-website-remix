@@ -334,13 +334,13 @@
     "slug": "azores",
     "name": "Azores",
     "countryCodes": ["pt"],
-    "image": "/images/travels/azores/cumeeiras-viewpoint.jpeg",
+    "image": "/images/travels/azores/cumeeiras-viewpoint-1.webp",
     "places": [
       {
         "name": "travels.places.azores.cumeeiras-viewpoint",
         "images": [
           {
-            "url": "/images/travels/azores/cumeeiras-viewpoint.jpeg",
+            "url": "/images/travels/azores/cumeeiras-viewpoint-1.webp",
             "landscape": true
           }
         ],
@@ -350,7 +350,7 @@
         "name": "travels.places.azores.carvao-cave",
         "images": [
           {
-            "url": "/images/travels/azores/carvao-cave.jpeg",
+            "url": "/images/travels/azores/carvao-cave-1.webp",
             "landscape": false
           }
         ],
@@ -360,8 +360,8 @@
         "name": "travels.places.azores.lake-of-fire",
         "images": [
           {
-            "url": "/images/travels/azores/lake-of-fire.jpeg",
-            "landscape": false
+            "url": "/images/travels/azores/lake-of-fire-1.webp",
+            "landscape": true
           }
         ],
         "coordinates": [37.7631342, -25.4753767]
@@ -370,7 +370,7 @@
         "name": "travels.places.azores.caldeira-velha",
         "images": [
           {
-            "url": "/images/travels/azores/caldeira-velha.jpeg",
+            "url": "/images/travels/azores/caldeira-velha-1.webp",
             "landscape": false
           }
         ],
@@ -380,7 +380,7 @@
         "name": "travels.places.azores.congro-lake",
         "images": [
           {
-            "url": "/images/travels/azores/congro-lake.jpeg",
+            "url": "/images/travels/azores/congro-lake-1.webp",
             "landscape": false
           }
         ],
@@ -390,7 +390,7 @@
         "name": "travels.places.azores.ponta-sossego-viewpoint",
         "images": [
           {
-            "url": "/images/travels/azores/ponta-sossego-viewpoint.jpeg",
+            "url": "/images/travels/azores/ponta-sossego-viewpoint-1.webp",
             "landscape": false
           }
         ],
@@ -400,7 +400,7 @@
         "name": "travels.places.azores.hells-mouth-viewpoint",
         "images": [
           {
-            "url": "/images/travels/azores/hells-mouth-viewpoint.jpeg",
+            "url": "/images/travels/azores/hells-mouth-viewpoint-1.webp",
             "landscape": false
           }
         ],
@@ -410,7 +410,7 @@
         "name": "travels.places.azores.monte-palace-hotel",
         "images": [
           {
-            "url": "/images/travels/azores/monte-palace-hotel.jpeg",
+            "url": "/images/travels/azores/monte-palace-hotel-1.webp",
             "landscape": true
           }
         ],
@@ -420,7 +420,7 @@
         "name": "travels.places.azores.lagoon-seven-cities",
         "images": [
           {
-            "url": "/images/travels/azores/lagoon-seven-cities.jpeg",
+            "url": "/images/travels/azores/lagoon-seven-cities-1.webp",
             "landscape": true
           }
         ],
@@ -430,7 +430,7 @@
         "name": "travels.places.azores.salto-cavalo-viewpoint",
         "images": [
           {
-            "url": "/images/travels/azores/salto-cavalo-viewpoint.jpeg",
+            "url": "/images/travels/azores/salto-cavalo-viewpoint-1.webp",
             "landscape": false
           }
         ],
@@ -440,7 +440,7 @@
         "name": "travels.places.azores.grena-park",
         "images": [
           {
-            "url": "/images/travels/azores/grena-park.jpeg",
+            "url": "/images/travels/azores/grena-park-1.webp",
             "landscape": true
           }
         ],
@@ -450,7 +450,7 @@
         "name": "travels.places.azores.furnas-lake",
         "images": [
           {
-            "url": "/images/travels/azores/furnas-lake.jpeg",
+            "url": "/images/travels/azores/furnas-lake-1.webp",
             "landscape": false
           }
         ],
@@ -460,15 +460,15 @@
         "name": "travels.places.azores.terra-nostra-garden",
         "images": [
           {
-            "url": "/images/travels/azores/terra-nostra-garden-1.jpeg",
+            "url": "/images/travels/azores/terra-nostra-garden-1.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/azores/terra-nostra-garden-2.jpeg",
+            "url": "/images/travels/azores/terra-nostra-garden-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/azores/terra-nostra-garden-3.jpeg",
+            "url": "/images/travels/azores/terra-nostra-garden-3.webp",
             "landscape": true
           }
         ],
@@ -480,13 +480,13 @@
     "slug": "madeira",
     "name": "Madeira",
     "countryCodes": ["pt"],
-    "image": "/images/travels/madeira/sao-lourenco-point.jpeg",
+    "image": "/images/travels/madeira/sao-lourenco-point-1.webp",
     "places": [
       {
         "name": "travels.places.madeira.balcoes-viewpoint",
         "images": [
           {
-            "url": "/images/travels/madeira/balcoes-viewpoint.jpeg",
+            "url": "/images/travels/madeira/balcoes-viewpoint-1.webp",
             "landscape": true
           }
         ],
@@ -496,7 +496,7 @@
         "name": "travels.places.madeira.cape-girao",
         "images": [
           {
-            "url": "/images/travels/madeira/cape-girao.jpeg",
+            "url": "/images/travels/madeira/cape-girao-1.webp",
             "landscape": true
           }
         ],
@@ -506,7 +506,7 @@
         "name": "travels.places.madeira.queimadas-forest-park",
         "images": [
           {
-            "url": "/images/travels/madeira/queimadas-forest-park.jpeg",
+            "url": "/images/travels/madeira/queimadas-forest-park-1.webp",
             "landscape": true
           }
         ],
@@ -516,11 +516,11 @@
         "name": "travels.places.madeira.sao-lourenco-point",
         "images": [
           {
-            "url": "/images/travels/madeira/sao-lourenco-point.jpeg",
+            "url": "/images/travels/madeira/sao-lourenco-point-1.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/madeira/sao-lourenco-point-2.jpeg",
+            "url": "/images/travels/madeira/sao-lourenco-point-2.webp",
             "landscape": true
           }
         ],
@@ -530,7 +530,7 @@
         "name": "travels.places.madeira.monte-palace",
         "images": [
           {
-            "url": "/images/travels/madeira/monte-palace.jpeg",
+            "url": "/images/travels/madeira/monte-palace-1.webp",
             "landscape": true
           }
         ],
