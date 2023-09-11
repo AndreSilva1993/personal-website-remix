@@ -3,25 +3,25 @@
     "slug": "prague-budapest",
     "name": "Prague / Budapest",
     "countryCodes": ["hu", "cz"],
-    "image": "/images/travels/prague-budapest/hungarian-parliament.jpeg",
+    "image": "/images/travels/prague-budapest/hungarian-parliament-1.webp",
     "places": [
       {
         "name": "travels.places.prague-budapest.hungarian-parliament",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/hungarian-parliament.jpeg",
+            "url": "/images/travels/prague-budapest/hungarian-parliament-1.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/prague-budapest/hungarian-parliament-2.jpeg",
+            "url": "/images/travels/prague-budapest/hungarian-parliament-2.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/prague-budapest/hungarian-parliament-3.jpeg",
+            "url": "/images/travels/prague-budapest/hungarian-parliament-3.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/hungarian-parliament-4.jpeg",
+            "url": "/images/travels/prague-budapest/hungarian-parliament-4.webp",
             "landscape": false
           }
         ],
@@ -31,11 +31,11 @@
         "name": "travels.places.prague-budapest.dohany-street-synagogue",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/dohany-street-synagogue.jpeg",
+            "url": "/images/travels/prague-budapest/dohany-street-synagogue-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/dohany-street-synagogue-2.jpeg",
+            "url": "/images/travels/prague-budapest/dohany-street-synagogue-2.webp",
             "landscape": false
           }
         ],
@@ -45,15 +45,15 @@
         "name": "travels.places.prague-budapest.fisherman-bastion",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/fisherman-bastion.jpeg",
+            "url": "/images/travels/prague-budapest/fisherman-bastion-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/fisherman-bastion-2.jpeg",
+            "url": "/images/travels/prague-budapest/fisherman-bastion-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/fisherman-bastion-3.jpeg",
+            "url": "/images/travels/prague-budapest/fisherman-bastion-3.webp",
             "landscape": false
           }
         ],
@@ -63,11 +63,11 @@
         "name": "travels.places.prague-budapest.matthias-church",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/matthias-church.jpeg",
+            "url": "/images/travels/prague-budapest/matthias-church-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/matthias-church-2.jpeg",
+            "url": "/images/travels/prague-budapest/matthias-church-2.webp",
             "landscape": true
           }
         ],
@@ -77,11 +77,11 @@
         "name": "travels.places.prague-budapest.hungarian-national-museum",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/hungarian-national-museum.jpeg",
+            "url": "/images/travels/prague-budapest/hungarian-national-museum-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/hungarian-national-museum-2.jpeg",
+            "url": "/images/travels/prague-budapest/hungarian-national-museum-2.webp",
             "landscape": false
           }
         ],
@@ -96,15 +96,15 @@
         "name": "travels.places.prague-budapest.st-stephen-basilica",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/st-stephen-basilica.jpeg",
+            "url": "/images/travels/prague-budapest/st-stephen-basilica-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/st-stephen-basilica-2.jpeg",
+            "url": "/images/travels/prague-budapest/st-stephen-basilica-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/st-stephen-basilica-3.jpeg",
+            "url": "/images/travels/prague-budapest/st-stephen-basilica-3.webp",
             "landscape": false
           }
         ],
@@ -116,18 +116,18 @@
         "coordinates": [50.0877361, 14.4226854]
       },
       {
-        "name": "travels.places.prague-budapest.national-museum",
+        "name": "travels.places.prague-budapest.prague-national-museum",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/national-museum.jpeg",
+            "url": "/images/travels/prague-budapest/prague-national-museum-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/national-museum-2.jpeg",
+            "url": "/images/travels/prague-budapest/prague-national-museum-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/national-museum-3.jpeg",
+            "url": "/images/travels/prague-budapest/prague-national-museum-3.webp",
             "landscape": false
           }
         ],
@@ -137,11 +137,11 @@
         "name": "travels.places.prague-budapest.st-vitus-cathedral",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/st-vitus-cathedral.jpeg",
+            "url": "/images/travels/prague-budapest/st-vitus-cathedral-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/st-vitus-cathedral-2.jpeg",
+            "url": "/images/travels/prague-budapest/st-vitus-cathedral-2.webp",
             "landscape": false
           }
         ],
@@ -151,7 +151,7 @@
         "name": "travels.places.prague-budapest.dancing-house",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/dancing-house.jpeg",
+            "url": "/images/travels/prague-budapest/dancing-house-1.webp",
             "landscape": false
           }
         ],
@@ -161,19 +161,19 @@
         "name": "travels.places.prague-budapest.vysehrad",
         "images": [
           {
-            "url": "/images/travels/prague-budapest/vysehrad.jpeg",
+            "url": "/images/travels/prague-budapest/vysehrad-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/vysehrad-2.jpeg",
+            "url": "/images/travels/prague-budapest/vysehrad-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/vysehrad-3.jpeg",
+            "url": "/images/travels/prague-budapest/vysehrad-3.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/prague-budapest/vysehrad-4.jpeg",
+            "url": "/images/travels/prague-budapest/vysehrad-4.webp",
             "landscape": false
           }
         ],
