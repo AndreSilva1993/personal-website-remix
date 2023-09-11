@@ -190,13 +190,13 @@
     "slug": "london",
     "name": "London",
     "countryCodes": ["gb"],
-    "image": "/images/travels/london/the-shard.jpeg",
+    "image": "/images/travels/london/the-shard-1.webp",
     "places": [
       {
         "name": "travels.places.london.british-museum",
         "images": [
           {
-            "url": "/images/travels/london/british-museum.jpeg",
+            "url": "/images/travels/london/british-museum-1.webp",
             "landscape": true
           }
         ],
@@ -206,11 +206,11 @@
         "name": "travels.places.london.national-gallery",
         "images": [
           {
-            "url": "/images/travels/london/national-gallery.jpeg",
+            "url": "/images/travels/london/national-gallery-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/london/national-gallery-2.jpeg",
+            "url": "/images/travels/london/national-gallery-2.webp",
             "landscape": false
           }
         ],
@@ -220,7 +220,7 @@
         "name": "travels.places.london.hyde-park",
         "images": [
           {
-            "url": "/images/travels/london/hyde-park.jpeg",
+            "url": "/images/travels/london/hyde-park-1.webp",
             "landscape": false
           }
         ],
@@ -230,7 +230,7 @@
         "name": "travels.places.london.kew-gardens",
         "images": [
           {
-            "url": "/images/travels/london/kew-gardens.jpeg",
+            "url": "/images/travels/london/kew-gardens-1.webp",
             "landscape": true
           }
         ],
@@ -240,7 +240,7 @@
         "name": "travels.places.london.harrods",
         "images": [
           {
-            "url": "/images/travels/london/harrods.jpeg",
+            "url": "/images/travels/london/harrods-1.webp",
             "landscape": true
           }
         ],
@@ -250,7 +250,7 @@
         "name": "travels.places.london.natural-history-museum",
         "images": [
           {
-            "url": "/images/travels/london/natural-history-museum.jpeg",
+            "url": "/images/travels/london/natural-history-museum-1.webp",
             "landscape": false
           }
         ],
@@ -260,7 +260,7 @@
         "name": "travels.places.london.london-eye",
         "images": [
           {
-            "url": "/images/travels/london/london-eye.jpeg",
+            "url": "/images/travels/london/london-eye-1.webp",
             "landscape": true
           }
         ],
@@ -270,7 +270,7 @@
         "name": "travels.places.london.saint-pancras-international",
         "images": [
           {
-            "url": "/images/travels/london/saint-pancras-international.jpeg",
+            "url": "/images/travels/london/saint-pancras-international-1.webp",
             "landscape": true
           }
         ],
@@ -280,11 +280,11 @@
         "name": "travels.places.london.westminster-abbey",
         "images": [
           {
-            "url": "/images/travels/london/westminster-abbey.jpeg",
+            "url": "/images/travels/london/westminster-abbey-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/london/westminster-abbey-2.jpeg",
+            "url": "/images/travels/london/westminster-abbey-2.webp",
             "landscape": false
           }
         ],
@@ -294,7 +294,7 @@
         "name": "travels.places.london.hays-galleria",
         "images": [
           {
-            "url": "/images/travels/london/hays-galleria.jpeg",
+            "url": "/images/travels/london/hays-galleria-1.webp",
             "landscape": false
           }
         ],
@@ -304,7 +304,7 @@
         "name": "travels.places.london.the-shard",
         "images": [
           {
-            "url": "/images/travels/london/the-shard.jpeg",
+            "url": "/images/travels/london/the-shard-1.webp",
             "landscape": false
           }
         ],
@@ -314,15 +314,15 @@
         "name": "travels.places.london.sky-garden",
         "images": [
           {
-            "url": "/images/travels/london/sky-garden.jpeg",
+            "url": "/images/travels/london/sky-garden-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/london/sky-garden-2.jpeg",
+            "url": "/images/travels/london/sky-garden-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/london/sky-garden-3.jpeg",
+            "url": "/images/travels/london/sky-garden-3.webp",
             "landscape": false
           }
         ],
