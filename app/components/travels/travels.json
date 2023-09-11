@@ -784,29 +784,29 @@
     "slug": "croatia",
     "name": "Croatia",
     "countryCodes": ["hr"],
-    "image": "/images/travels/croatia/plitvice-lakes-1.jpeg",
+    "image": "/images/travels/croatia/plitvice-lakes-1.webp",
     "places": [
       {
         "name": "travels.places.croatia.plitvice-lakes",
         "images": [
           {
-            "url": "/images/travels/croatia/plitvice-lakes-1.jpeg",
+            "url": "/images/travels/croatia/plitvice-lakes-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/plitvice-lakes-2.jpeg",
+            "url": "/images/travels/croatia/plitvice-lakes-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/plitvice-lakes-3.jpeg",
+            "url": "/images/travels/croatia/plitvice-lakes-3.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/plitvice-lakes-4.jpeg",
+            "url": "/images/travels/croatia/plitvice-lakes-4.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/plitvice-lakes-5.jpeg",
+            "url": "/images/travels/croatia/plitvice-lakes-5.webp",
             "landscape": false
           }
         ],
@@ -816,7 +816,7 @@
         "name": "travels.places.croatia.zadar",
         "images": [
           {
-            "url": "/images/travels/croatia/zadar-1.jpeg",
+            "url": "/images/travels/croatia/zadar-1.webp",
             "landscape": false
           }
         ],
@@ -826,7 +826,7 @@
         "name": "travels.places.croatia.gric-tunnel",
         "images": [
           {
-            "url": "/images/travels/croatia/gric-tunnel-1.jpeg",
+            "url": "/images/travels/croatia/gric-tunnel-1.webp",
             "landscape": false
           }
         ],
@@ -836,7 +836,7 @@
         "name": "travels.places.croatia.golden-horn-beach",
         "images": [
           {
-            "url": "/images/travels/croatia/golden-horn-beach-1.jpeg",
+            "url": "/images/travels/croatia/golden-horn-beach-1.webp",
             "landscape": false
           }
         ],
@@ -846,15 +846,15 @@
         "name": "travels.places.croatia.krka-national-park",
         "images": [
           {
-            "url": "/images/travels/croatia/krka-1.jpeg",
+            "url": "/images/travels/croatia/krka-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/krka-2.jpeg",
+            "url": "/images/travels/croatia/krka-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/krka-3.jpeg",
+            "url": "/images/travels/croatia/krka-3.webp",
             "landscape": false
           }
         ],
@@ -864,11 +864,11 @@
         "name": "travels.places.croatia.lokrum",
         "images": [
           {
-            "url": "/images/travels/croatia/lokrum-1.jpeg",
+            "url": "/images/travels/croatia/lokrum-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/lokrum-2.jpeg",
+            "url": "/images/travels/croatia/lokrum-2.webp",
             "landscape": false
           }
         ],
@@ -878,23 +878,23 @@
         "name": "travels.places.croatia.dubrovnik",
         "images": [
           {
-            "url": "/images/travels/croatia/dubrovnik-1.jpeg",
+            "url": "/images/travels/croatia/dubrovnik-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/dubrovnik-2.jpeg",
+            "url": "/images/travels/croatia/dubrovnik-2.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/croatia/dubrovnik-3.jpeg",
+            "url": "/images/travels/croatia/dubrovnik-3.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/croatia/dubrovnik-4.jpeg",
+            "url": "/images/travels/croatia/dubrovnik-4.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/dubrovnik-5.jpeg",
+            "url": "/images/travels/croatia/dubrovnik-5.webp",
             "landscape": false
           }
         ],
@@ -904,11 +904,11 @@
         "name": "travels.places.croatia.klis-fortress",
         "images": [
           {
-            "url": "/images/travels/croatia/klis-fortress-1.jpeg",
+            "url": "/images/travels/croatia/klis-fortress-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/croatia/klis-fortress-2.jpeg",
+            "url": "/images/travels/croatia/klis-fortress-2.webp",
             "landscape": false
           }
         ],
