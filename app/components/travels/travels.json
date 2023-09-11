@@ -674,25 +674,25 @@
     "slug": "northern-italy",
     "name": "Northern Italy",
     "countryCodes": ["it"],
-    "image": "/images/travels/northern-italy/venice-canals-1.jpeg",
+    "image": "/images/travels/northern-italy/venice-canals-1.webp",
     "places": [
       {
         "name": "travels.places.northern-italy.venice-canals",
         "images": [
           {
-            "url": "/images/travels/northern-italy/venice-canals-1.jpeg",
+            "url": "/images/travels/northern-italy/venice-canals-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/northern-italy/venice-canals-2.jpeg",
+            "url": "/images/travels/northern-italy/venice-canals-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/northern-italy/venice-canals-3.jpeg",
+            "url": "/images/travels/northern-italy/venice-canals-3.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/northern-italy/venice-canals-4.jpeg",
+            "url": "/images/travels/northern-italy/venice-canals-4.webp",
             "landscape": false
           }
         ],
@@ -702,11 +702,11 @@
         "name": "travels.places.northern-italy.galleria-vittorio-emanuele-ii",
         "images": [
           {
-            "url": "/images/travels/northern-italy/galleria-vittorio-emanuele-ii.jpeg",
+            "url": "/images/travels/northern-italy/galleria-vittorio-emanuele-ii-1.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/northern-italy/galleria-vittorio-emanuele-ii-2.jpeg",
+            "url": "/images/travels/northern-italy/galleria-vittorio-emanuele-ii-2.webp",
             "landscape": true
           }
         ],
@@ -716,15 +716,15 @@
         "name": "travels.places.northern-italy.milan-cathedral",
         "images": [
           {
-            "url": "/images/travels/northern-italy/milan-cathedral-1.jpeg",
+            "url": "/images/travels/northern-italy/milan-cathedral-1.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/northern-italy/milan-cathedral-2.jpeg",
+            "url": "/images/travels/northern-italy/milan-cathedral-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/northern-italy/milan-cathedral-3.jpeg",
+            "url": "/images/travels/northern-italy/milan-cathedral-3.webp",
             "landscape": true
           }
         ],
@@ -734,16 +734,16 @@
         "name": "travels.places.northern-italy.cathedral-of-santa-maria-del-fiore",
         "images": [
           {
-            "url": "/images/travels/northern-italy/cathedral-of-santa-maria-del-fiore-1.jpeg",
+            "url": "/images/travels/northern-italy/cathedral-of-santa-maria-del-fiore-1.webp",
+            "landscape": true
+          },
+          {
+            "url": "/images/travels/northern-italy/cathedral-of-santa-maria-del-fiore-2.webp",
+            "landscape": true
+          },
+          {
+            "url": "/images/travels/northern-italy/cathedral-of-santa-maria-del-fiore-3.webp",
             "landscape": false
-          },
-          {
-            "url": "/images/travels/northern-italy/cathedral-of-santa-maria-del-fiore-2.jpeg",
-            "landscape": true
-          },
-          {
-            "url": "/images/travels/northern-italy/cathedral-of-santa-maria-del-fiore-3.jpeg",
-            "landscape": true
           }
         ],
         "coordinates": [43.7731, 11.256]
@@ -752,7 +752,7 @@
         "name": "travels.places.northern-italy.michelangelo-square",
         "images": [
           {
-            "url": "/images/travels/northern-italy/michelangelo-square.jpeg",
+            "url": "/images/travels/northern-italy/michelangelo-square-1.webp",
             "landscape": true
           }
         ],
@@ -762,7 +762,7 @@
         "name": "travels.places.northern-italy.accademia-gallery",
         "images": [
           {
-            "url": "/images/travels/northern-italy/accademia-gallery.jpeg",
+            "url": "/images/travels/northern-italy/accademia-gallery-1.webp",
             "landscape": false
           }
         ],
@@ -772,7 +772,7 @@
         "name": "travels.places.northern-italy.gates-of-paradise",
         "images": [
           {
-            "url": "/images/travels/northern-italy/gates-of-paradise.jpeg",
+            "url": "/images/travels/northern-italy/gates-of-paradise-1.webp",
             "landscape": false
           }
         ],
