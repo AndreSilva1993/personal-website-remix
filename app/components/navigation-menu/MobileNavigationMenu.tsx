@@ -26,7 +26,12 @@ export function MobileNavigationMenu({
       <AnimatePresence>
         {menuOpen && (
           <>
-            <motion.div animate={{ x: 0 }} exit={{ x: '100%' }} initial={{ x: '100%' }}>
+            <motion.div
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              initial={{ x: '100%' }}
+              className={styles.navigationMenu}
+            >
               <ul className={styles.navigationMenuList}>
                 {navigationLinks.map(({ href, title, icon }) => (
                   <li className={styles.navigationMenuListItem} key={href}>
