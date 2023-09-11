@@ -542,13 +542,13 @@
     "slug": "barcelona",
     "name": "Barcelona",
     "countryCodes": ["es"],
-    "image": "/images/travels/barcelona/tibidabo.jpeg",
+    "image": "/images/travels/barcelona/tibidabo-1.webp",
     "places": [
       {
         "name": "travels.places.barcelona.tibidabo",
         "images": [
           {
-            "url": "/images/travels/barcelona/tibidabo.jpeg",
+            "url": "/images/travels/barcelona/tibidabo-1.webp",
             "landscape": true
           }
         ],
@@ -558,7 +558,7 @@
         "name": "travels.places.barcelona.spain-square",
         "images": [
           {
-            "url": "/images/travels/barcelona/spain-square.jpeg",
+            "url": "/images/travels/barcelona/spain-square-1.webp",
             "landscape": false
           }
         ],
@@ -568,15 +568,15 @@
         "name": "travels.places.barcelona.montserrat",
         "images": [
           {
-            "url": "/images/travels/barcelona/montserrat.jpeg",
+            "url": "/images/travels/barcelona/montserrat-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/barcelona/montserrat-2.jpeg",
+            "url": "/images/travels/barcelona/montserrat-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/barcelona/montserrat-3.jpeg",
+            "url": "/images/travels/barcelona/montserrat-3.webp",
             "landscape": true
           }
         ],
@@ -586,11 +586,11 @@
         "name": "travels.places.barcelona.park-guell",
         "images": [
           {
-            "url": "/images/travels/barcelona/park-guell.jpeg",
+            "url": "/images/travels/barcelona/park-guell-1.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/barcelona/park-guell-2.jpeg",
+            "url": "/images/travels/barcelona/park-guell-2.webp",
             "landscape": false
           }
         ],
@@ -600,7 +600,7 @@
         "name": "travels.places.barcelona.arc-de-triomf",
         "images": [
           {
-            "url": "/images/travels/barcelona/arc-de-triomf.jpeg",
+            "url": "/images/travels/barcelona/arc-de-triomf-1.webp",
             "landscape": true
           }
         ],
@@ -610,11 +610,11 @@
         "name": "travels.places.barcelona.sagrada-familia",
         "images": [
           {
-            "url": "/images/travels/barcelona/sagrada-familia.jpeg",
+            "url": "/images/travels/barcelona/sagrada-familia-1.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/barcelona/sagrada-familia-2.jpeg",
+            "url": "/images/travels/barcelona/sagrada-familia-2.webp",
             "landscape": false
           }
         ],
@@ -624,7 +624,7 @@
         "name": "travels.places.barcelona.cathedral-la-ribera",
         "images": [
           {
-            "url": "/images/travels/barcelona/cathedral-la-ribera.jpeg",
+            "url": "/images/travels/barcelona/cathedral-la-ribera-1.webp",
             "landscape": true
           }
         ],
@@ -634,15 +634,15 @@
         "name": "travels.places.barcelona.barcelona-cathedral",
         "images": [
           {
-            "url": "/images/travels/barcelona/barcelona-cathedral.jpeg",
+            "url": "/images/travels/barcelona/barcelona-cathedral-1.webp",
             "landscape": true
           },
           {
-            "url": "/images/travels/barcelona/barcelona-cathedral-2.jpeg",
+            "url": "/images/travels/barcelona/barcelona-cathedral-2.webp",
             "landscape": false
           },
           {
-            "url": "/images/travels/barcelona/barcelona-cathedral-3.jpeg",
+            "url": "/images/travels/barcelona/barcelona-cathedral-3.webp",
             "landscape": false
           }
         ],
@@ -652,7 +652,7 @@
         "name": "travels.places.barcelona.casa-mila",
         "images": [
           {
-            "url": "/images/travels/barcelona/casa-mila.jpeg",
+            "url": "/images/travels/barcelona/casa-mila-1.webp",
             "landscape": true
           }
         ],
@@ -662,7 +662,7 @@
         "name": "travels.places.barcelona.casa-batllo",
         "images": [
           {
-            "url": "/images/travels/barcelona/casa-batllo.jpeg",
+            "url": "/images/travels/barcelona/casa-batllo-1.webp",
             "landscape": true
           }
         ],
