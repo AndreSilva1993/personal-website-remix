@@ -1,7 +1,7 @@
 import styles from '~/styles/portfolio.css';
 
 import { useState } from 'react';
-import { json, type LinksFunction, type V2_MetaFunction } from '@remix-run/node';
+import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { useTranslation } from 'react-i18next';
 
@@ -19,8 +19,8 @@ export const links: LinksFunction = () => [
   { rel: 'preload', href: '/images/portfolio/toconline/1.webp', as: 'image' },
 ];
 
-export const meta: V2_MetaFunction = ({ data }) => {
-  return [{ title: data.seoTitle }, { name: 'description', content: data.seoDescription }];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
 };
 
 export const loader = async () => {

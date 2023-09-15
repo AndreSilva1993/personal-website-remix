@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
-import type { V2_MetaFunction, LinksFunction } from '@remix-run/node';
+import type { MetaFunction, LinksFunction } from '@remix-run/node';
 
 import travels from '~/components/travels/travels.json';
 import { initI18next } from '~/i18n/i18n';
@@ -16,11 +16,11 @@ import { TravelCountries } from '~/components/travels/TravelCountries';
 import { MainContainer } from '~/components/main-container/MainContainer';
 import { PageContainer } from '~/components/page-container/PageContainer';
 
-export const meta: V2_MetaFunction = ({ data }) => {
-  return [{ title: data.seoTitle }, { name: 'description', content: data.seoDescription }];
-};
-
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
+};
 
 export const loader = async () => {
   const i18nInstance = await initI18next();

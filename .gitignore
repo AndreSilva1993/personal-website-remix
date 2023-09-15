@@ -8,6 +8,7 @@ node_modules
 
 # Yarn related files.
 /.yarn/cache
+/.yarn/unplugged
 /.yarn/install-state.gz
 
 /build/
