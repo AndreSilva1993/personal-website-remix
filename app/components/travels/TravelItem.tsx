@@ -35,7 +35,7 @@ export function TravelItem({ travel, onGoBackButtonClick }: TravelItemProps) {
         {placesImages.map(({ url, landscape, name }, index) => (
           <MasonryItem landscape={landscape} key={index}>
             <div className={classNames('travelItemImageWrapper', { landscape })}>
-              <img src={url} alt={name} />
+              <img src={url} alt={name} loading="lazy" />
               <p className="travelItemImageTitle">{t(name)}</p>
             </div>
           </MasonryItem>
