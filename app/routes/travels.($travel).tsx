@@ -1,10 +1,10 @@
 import styles from '~/styles/travels.css';
 
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import { json } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
+import { useLoaderData, useParams } from '@remix-run/react';
 import type { MetaFunction, LinksFunction } from '@remix-run/node';
 
 import travels from '~/components/travels/travels.json';
@@ -35,9 +35,10 @@ export const loader = async () => {
 
 export default function Travels() {
   const { t } = useTranslation();
+  const { travel: travelParam } = useParams();
   const { travels } = useLoaderData<typeof loader>();
 
-  const [selectedTravel, setSelectedTravel] = useState<(typeof travels)[number]>();
+  const selectedTravel = travels.find(({ slug }) => slug === travelParam);
 
   const countries = travels
     .map(({ countryCodes }) => countryCodes)
@@ -65,16 +66,9 @@ export default function Travels() {
 
         <AnimatePresence mode="wait">
           {!selectedTravel ? (
-            <TravelList
-              travels={travels}
-              onTravelClick={(index) => setSelectedTravel(travels[index])}
-            />
+            <TravelList travels={travels} />
           ) : (
-            <TravelItem
-              key={selectedTravel.name}
-              travel={selectedTravel}
-              onGoBackButtonClick={() => setSelectedTravel(undefined)}
-            />
+            <TravelItem key={selectedTravel.name} travel={selectedTravel} />
           )}
         </AnimatePresence>
       </PageContainer>

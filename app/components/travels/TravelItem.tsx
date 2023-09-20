@@ -1,18 +1,17 @@
+import { Link } from '@remix-run/react';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-import { Button } from '~/components/button/Button';
 import { Masonry, MasonryItem } from '~/components/masonry/Masonry';
 
 import type { ITravel } from './Travel.types';
 
 interface TravelItemProps {
   travel: ITravel;
-  onGoBackButtonClick: () => void;
 }
 
-export function TravelItem({ travel, onGoBackButtonClick }: TravelItemProps) {
+export function TravelItem({ travel }: TravelItemProps) {
   const { t } = useTranslation();
   const placesImages = travel.places
     .map(({ images, name }) => images.map(({ url, landscape }) => ({ url, landscape, name })))
@@ -29,7 +28,9 @@ export function TravelItem({ travel, onGoBackButtonClick }: TravelItemProps) {
       <div className="travelItemHeading">
         <h2 className="travelItemName">{travel.name}</h2>
 
-        <Button onClick={onGoBackButtonClick}>{t('common.goBack')}</Button>
+        <Link className="travelItemGoBack" to="/travels">
+          {t('common.goBack')}
+        </Link>
       </div>
       <Masonry>
         {placesImages.map(({ url, landscape, name }, index) => (

@@ -117,6 +117,10 @@
   font-weight: var(--font-weight-bold);
 }
 
+.travelItemGoBack {
+  color: var(--color-white);
+}
+
 .travelItemImageWrapper {
   width: 100%;
   overflow: hidden;

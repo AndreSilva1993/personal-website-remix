@@ -1,13 +1,13 @@
+import { Link } from '@remix-run/react';
 import { motion } from 'framer-motion';
 
 import type { ITravel } from './Travel.types';
 
 interface TravelListItemProps {
   travels: ITravel[];
-  onTravelClick: (index: number) => void;
 }
 
-export function TravelList({ travels, onTravelClick }: TravelListItemProps) {
+export function TravelList({ travels }: TravelListItemProps) {
   return (
     <motion.div
       transition={{ duration: 0.5 }}
@@ -16,10 +16,12 @@ export function TravelList({ travels, onTravelClick }: TravelListItemProps) {
       initial={{ opacity: 0, x: '-100%' }}
     >
       <ul className="travelList">
-        {travels.map(({ name, image }, index) => (
-          <li className="travelListItem" key={name} onClick={() => onTravelClick(index)}>
-            <img src={image} alt={name} loading="lazy" className="travelListItemImage" />
-            <span className="travelListItemName">{name}</span>
+        {travels.map(({ name, image, slug }) => (
+          <li className="travelListItem" key={name}>
+            <Link to={`/travels/${slug}`}>
+              <img src={image} alt={name} loading="lazy" className="travelListItemImage" />
+              <span className="travelListItemName">{name}</span>
+            </Link>
           </li>
         ))}
       </ul>
