@@ -1,5 +1,5 @@
-const fs = require('fs');
-const sharp = require('sharp');
+import fs from 'fs';
+import sharp from 'sharp';
 
 const originalImagesFolder = 'travel-images';
 const outputImagesFolder = 'public/images/travels';

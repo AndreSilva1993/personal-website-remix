@@ -167,6 +167,12 @@
         "neuschwanstein-castle": "Neuschwanstein Castle",
         "dachau-concentration-camp": "Dachau Concentration Camp",
         "herrenchiemsee-new-palace": "Herrenchiemsee New Palace"
+      },
+      "dolomites": {
+        "seceda": "Seceda",
+        "lago-di-braies": "Lago Di Braies",
+        "lago-di-landro": "Lago Di Landro",
+        "cadini-di-misurina": "Cadini Di Misurina"
       }
     }
   },
