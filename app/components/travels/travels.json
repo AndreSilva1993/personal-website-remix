@@ -11,6 +11,10 @@
           {
             "url": "/images/travels/dolomites/lago-di-braies-1.webp",
             "landscape": false
+          },
+          {
+            "url": "/images/travels/dolomites/lago-di-braies-2.webp",
+            "landscape": true
           }
         ],
         "coordinates": [46.6943, 12.0854]
@@ -41,9 +45,53 @@
           {
             "url": "/images/travels/dolomites/seceda-1.webp",
             "landscape": true
+          },
+          {
+            "url": "/images/travels/dolomites/seceda-2.webp",
+            "landscape": true
           }
         ],
         "coordinates": [46.5981, 11.7242]
+      },
+      {
+        "name": "travels.places.dolomites.lago-di-misurina",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/lago-di-misurina-1.webp",
+            "landscape": true
+          }
+        ],
+        "coordinates": [46.5826, 12.2544]
+      },
+      {
+        "name": "travels.places.dolomites.tofana-di-mezzo",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/tofana-di-mezzo-1.webp",
+            "landscape": true
+          }
+        ],
+        "coordinates": [46.551027, 12.065544]
+      },
+      {
+        "name": "travels.places.dolomites.lago-di-sorapis",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/lago-di-sorapis-1.webp",
+            "landscape": false
+          }
+        ],
+        "coordinates": [46.5206, 12.2235]
+      },
+      {
+        "name": "travels.places.dolomites.vallunga",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/vallunga-1.webp",
+            "landscape": true
+          }
+        ],
+        "coordinates": [46.5647, 11.7775]
       }
     ]
   },

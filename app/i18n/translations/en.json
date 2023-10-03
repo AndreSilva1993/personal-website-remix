@@ -170,9 +170,13 @@
       },
       "dolomites": {
         "seceda": "Seceda",
-        "lago-di-braies": "Lago Di Braies",
-        "lago-di-landro": "Lago Di Landro",
-        "cadini-di-misurina": "Cadini Di Misurina"
+        "vallunga": "Vallunga",
+        "lago-di-braies": "Lago di Braies",
+        "lago-di-landro": "Lago di Landro",
+        "lago-di-sorapis": "Lago di Sorapis",
+        "lago-di-misurina": "Lago di Misurina",
+        "tofana-di-mezzo": "Tofana di Mezzo",
+        "cadini-di-misurina": "Cadini di Misurina"
       }
     }
   },
