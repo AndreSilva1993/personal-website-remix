@@ -15,6 +15,10 @@
           {
             "url": "/images/travels/dolomites/lago-di-braies-2.webp",
             "landscape": true
+          },
+          {
+            "url": "/images/travels/dolomites/lago-di-braies-3.webp",
+            "landscape": true
           }
         ],
         "coordinates": [46.6943, 12.0854]
@@ -25,6 +29,10 @@
           {
             "url": "/images/travels/dolomites/lago-di-landro-1.webp",
             "landscape": false
+          },
+          {
+            "url": "/images/travels/dolomites/lago-di-landro-2.webp",
+            "landscape": true
           }
         ],
         "coordinates": [46.6307, 12.231]
@@ -92,6 +100,16 @@
           }
         ],
         "coordinates": [46.5647, 11.7775]
+      },
+      {
+        "name": "travels.places.dolomites.tre-cime-di-lavaredo",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/tre-cime-di-lavaredo-1.webp",
+            "landscape": false
+          }
+        ],
+        "coordinates": [46.6187, 12.3028]
       }
     ]
   },
