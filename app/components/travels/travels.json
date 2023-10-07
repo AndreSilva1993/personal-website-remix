@@ -38,6 +38,16 @@
         "coordinates": [46.6307, 12.231]
       },
       {
+        "name": "travels.places.dolomites.val-di-funes",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/val-di-funes-1.webp",
+            "landscape": false
+          }
+        ],
+        "coordinates": [46.6395, 11.6742]
+      },
+      {
         "name": "travels.places.dolomites.cadini-di-misurina",
         "images": [
           {
@@ -110,6 +120,16 @@
           }
         ],
         "coordinates": [46.6187, 12.3028]
+      },
+      {
+        "name": "travels.places.dolomites.cinque-torri",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/cinque-torri-1.webp",
+            "landscape": true
+          }
+        ],
+        "coordinates": [46.5099, 12.0516]
       }
     ]
   },
