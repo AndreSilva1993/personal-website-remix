@@ -6,6 +6,16 @@
     "countryCodes": ["it"],
     "places": [
       {
+        "name": "travels.places.dolomites.garda",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/garda-1.webp",
+            "landscape": true
+          }
+        ],
+        "coordinates": [45.6049, 10.6351]
+      },
+      {
         "name": "travels.places.dolomites.lago-di-braies",
         "images": [
           {
@@ -130,6 +140,16 @@
           }
         ],
         "coordinates": [46.5099, 12.0516]
+      },
+      {
+        "name": "travels.places.dolomites.alpe-di-siusi",
+        "images": [
+          {
+            "url": "/images/travels/dolomites/alpe-di-siusi-1.webp",
+            "landscape": true
+          }
+        ],
+        "coordinates": [46.5423, 11.6169]
       }
     ]
   },
