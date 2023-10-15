@@ -77,6 +77,10 @@
           {
             "url": "/images/travels/dolomites/seceda-2.webp",
             "landscape": true
+          },
+          {
+            "url": "/images/travels/dolomites/seceda-3.webp",
+            "landscape": true
           }
         ],
         "coordinates": [46.5981, 11.7242]
@@ -96,6 +100,10 @@
         "images": [
           {
             "url": "/images/travels/dolomites/tofana-di-mezzo-1.webp",
+            "landscape": true
+          },
+          {
+            "url": "/images/travels/dolomites/tofana-di-mezzo-2.webp",
             "landscape": true
           }
         ],
