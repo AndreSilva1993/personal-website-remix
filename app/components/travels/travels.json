@@ -52,7 +52,7 @@
         "images": [
           {
             "url": "/images/travels/dolomites/val-di-funes-1.webp",
-            "landscape": false
+            "landscape": true
           }
         ],
         "coordinates": [46.6395, 11.6742]
