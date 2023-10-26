@@ -24,8 +24,12 @@ export const loader = async () => {
   const i18nInstance = await initI18next();
   const t = i18nInstance.getFixedT('en');
 
-  const gitHubUrl = 'https://github.com/AndreSilva1993';
-  const linkedInUrl = 'https://www.linkedin.com/in/andre-emanuel/';
+  const socialLinks = {
+    github: 'https://github.com/AndreSilva1993',
+    linkedIn: 'https://linkedin.com/in/andre-emanuel/',
+    '500px': 'https://500px.com/p/andreemanuel1993',
+  };
+
   const technologies = [
     { image: 'react.svg', name: 'ReactJS', value: 100 },
     { image: 'typescript.svg', name: 'TypeScript', value: 100 },
@@ -44,8 +48,7 @@ export const loader = async () => {
   ];
 
   return json({
-    gitHubUrl,
-    linkedInUrl,
+    socialLinks,
     technologies,
     seoTitle: t('about.seo.title'),
     seoDescription: t('about.seo.description'),
@@ -54,7 +57,7 @@ export const loader = async () => {
 
 export default function Index() {
   const { t } = useTranslation();
-  const { gitHubUrl, linkedInUrl, technologies } = useLoaderData<typeof loader>();
+  const { socialLinks, technologies } = useLoaderData<typeof loader>();
 
   return (
     <MainContainer>
@@ -65,11 +68,14 @@ export default function Index() {
         <div className="titleWrapper">
           <h2 className="subTitle">{t('about.about-me')}</h2>
           <div className="socialWrapper">
-            <a target="_blank" rel="noreferrer" href={gitHubUrl} className="socialLink">
+            <a target="_blank" rel="noreferrer" href={socialLinks.github} className="socialLink">
               <img width={25} height={25} src="/images/about/github.svg" alt="GitHub" />
             </a>
-            <a target="_blank" rel="noreferrer" href={linkedInUrl} className="socialLink">
+            <a target="_blank" rel="noreferrer" href={socialLinks.linkedIn} className="socialLink">
               <img width={25} height={25} src="/images/about/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a target="_blank" rel="noreferrer" href={socialLinks['500px']} className="socialLink">
+              <img width={50} height={25} src="/images/about/500px.svg" alt="500px" />
             </a>
           </div>
         </div>
