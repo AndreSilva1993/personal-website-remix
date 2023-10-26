@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import type { ChangeEventHandler, ReactNode } from 'react';
 
 interface SelectProps {
-  value: string;
+  value?: string;
   className: string;
   children: ReactNode;
   onChange: ChangeEventHandler<HTMLSelectElement>;

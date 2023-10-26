@@ -13,6 +13,8 @@ import { PageContainer } from '~/components/page-container/PageContainer';
 import { MusicAlbums } from '~/components/music/MusicAlbums';
 import { MusicArtists } from '~/components/music/MusicArtists';
 import { MusicRecentTracks } from '~/components/music/MusicRecentTracks';
+import type { SpotifyTimeRange } from '~/api-clients/spotify.types';
+import type { LastFMTimePeriod } from '~/api-clients/last-fm.types';
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
@@ -31,9 +33,17 @@ export const loader = async () => {
   ]);
 
   return json({
-    topAlbums,
-    topArtists,
     recentTracks,
+    topAlbums: {
+      page: 1,
+      items: topAlbums,
+      period: 'overall' as LastFMTimePeriod,
+    },
+    topArtists: {
+      page: 1,
+      items: topArtists,
+      period: 'long_term' as SpotifyTimeRange,
+    },
     seoTitle: t('music.seo.title'),
     seoDescription: t('music.seo.description'),
   });
@@ -47,8 +57,8 @@ export default function Travels() {
     <MainContainer>
       <PageContainer className="pageContainer">
         <h1 className="title">{t('music.title')}</h1>
-        <MusicAlbums initialTopAlbums={topAlbums} />
-        <MusicArtists initialTopArtists={topArtists} />
+        <MusicAlbums initialData={topAlbums} />
+        <MusicArtists initialData={topArtists} />
         <MusicRecentTracks initialRecentTracks={recentTracks} />
       </PageContainer>
     </MainContainer>
