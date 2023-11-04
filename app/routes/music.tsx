@@ -1,9 +1,9 @@
-import styles from '~/styles/music.css';
+import '~/styles/music.css';
 
 import { json } from '@remix-run/node';
 import { useTranslation } from 'react-i18next';
 import { useLoaderData } from '@remix-run/react';
-import type { MetaFunction, LinksFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/node';
 
 import { initI18next } from '~/i18n/i18n';
 import { getTopArtists } from '~/api-clients/spotify';
@@ -15,8 +15,6 @@ import { MusicArtists } from '~/components/music/MusicArtists';
 import { MusicRecentTracks } from '~/components/music/MusicRecentTracks';
 import type { SpotifyTimeRange } from '~/api-clients/spotify.types';
 import type { LastFMTimePeriod } from '~/api-clients/last-fm.types';
-
-export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];

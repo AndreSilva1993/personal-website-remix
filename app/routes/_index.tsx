@@ -1,4 +1,4 @@
-import styles from '~/styles/about.css';
+import '~/styles/about.css';
 
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
@@ -16,7 +16,6 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: styles },
   { rel: 'preload', href: '/images/about/about.jpeg', as: 'image' },
 ];
 

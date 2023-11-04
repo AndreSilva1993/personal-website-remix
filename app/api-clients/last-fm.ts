@@ -9,11 +9,11 @@ import type {
 async function requestLastFM<T>(searchParams: Record<string, string | number>) {
   const fetchSearchParams = new URLSearchParams({
     format: 'json',
-    user: process.env.LAST_FM_API_USER!,
-    api_key: process.env.LAST_FM_API_KEY!,
+    user: import.meta.env.VITE_LAST_FM_API_USER,
+    api_key: import.meta.env.VITE_LAST_FM_API_KEY,
     ...searchParams,
   });
-  const response = await fetch(`${process.env.LAST_FM_API_URL}?${fetchSearchParams}`);
+  const response = await fetch(`${import.meta.env.VITE_LAST_FM_API_URL}?${fetchSearchParams}`);
 
   if (!response.ok) {
     return [] as T;

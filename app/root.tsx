@@ -1,4 +1,3 @@
-import { cssBundleHref } from '@remix-run/css-bundle';
 import { json, type LinksFunction } from '@remix-run/node';
 import {
   Links,
@@ -10,25 +9,22 @@ import {
   useLoaderData,
 } from '@remix-run/react';
 
-import variables from '~/styles/variables.css';
-import globalStyles from '~/styles/global-styles.css';
+import '~/styles/global-styles.css';
+import '~/styles/variables.css';
 
 export const links: LinksFunction = () => [
   { rel: 'icon', href: '/favicon.png' },
-  { rel: 'stylesheet', href: globalStyles },
-  { rel: 'stylesheet', href: variables },
   { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
   {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap',
   },
-  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ];
 
 export const loader = () => {
   return json({
     ENV: {
-      STADIA_MAP_API_KEY: process.env.STADIA_MAP_API_KEY,
+      STADIA_MAP_API_KEY: import.meta.env.VITE_STADIA_MAP_API_KEY,
     },
   });
 };
@@ -52,8 +48,8 @@ export default function App() {
           }}
         />
         <ScrollRestoration />
-        <Scripts />
         <LiveReload />
+        <Scripts />
       </body>
     </html>
   );

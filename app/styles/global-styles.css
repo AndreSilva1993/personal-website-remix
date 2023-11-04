@@ -97,8 +97,7 @@ html {
   background-color: var(--color-black);
 }
 
-body,
-#__next {
+body {
   width: 100%;
   height: 100%;
 }

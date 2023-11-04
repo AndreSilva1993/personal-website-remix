@@ -1,4 +1,4 @@
-import styles from '~/styles/portfolio.css';
+import '~/styles/portfolio.css';
 
 import { useState } from 'react';
 import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
@@ -12,7 +12,6 @@ import { PortfolioItem } from '~/components/portfolio/PortfolioItem';
 import { PortfolioModal } from '~/components/portfolio/PortfolioModal';
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: styles },
   { rel: 'preload', href: '/images/portfolio/docker/1.png', as: 'image' },
   { rel: 'preload', href: '/images/portfolio/tankey/1.webp', as: 'image' },
   { rel: 'preload', href: '/images/portfolio/burberry/1.webp', as: 'image' },

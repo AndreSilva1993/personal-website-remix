@@ -8,35 +8,38 @@ import type {
 
 async function getSpotifyAccessToken() {
   const { get, set, expire, exists } = new Redis({
-    url: process.env.UPSTASH_REDIS_URL,
-    token: process.env.UPSTASH_REDIS_TOKEN,
+    url: import.meta.env.VITE_UPSTASH_REDIS_URL,
+    token: import.meta.env.VITE_UPSTASH_REDIS_TOKEN,
   });
 
-  const accessTokenExists = await exists(process.env.SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
+  const accessTokenExists = await exists(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
   if (!accessTokenExists) {
     const clientIdAndSecret = btoa(
-      `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
+      `${import.meta.env.VITE_SPOTIFY_CLIENT_ID}:${import.meta.env.VITE_SPOTIFY_CLIENT_SECRET}`
     );
 
-    const spotifyResponse = await fetch(`${process.env.SPOTIFY_ACCOUNTS_API_URL}/api/token`, {
-      method: 'POST',
-      body: new URLSearchParams({
-        grant_type: 'refresh_token',
-        refresh_token: process.env.SPOTIFY_REFRESH_TOKEN,
-      }),
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: `Basic ${clientIdAndSecret}`,
-      },
-    });
+    const spotifyResponse = await fetch(
+      `${import.meta.env.VITE_SPOTIFY_ACCOUNTS_API_URL}/api/token`,
+      {
+        method: 'POST',
+        body: new URLSearchParams({
+          grant_type: 'refresh_token',
+          refresh_token: import.meta.env.VITE_SPOTIFY_REFRESH_TOKEN,
+        }),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Authorization: `Basic ${clientIdAndSecret}`,
+        },
+      }
+    );
 
     const { access_token: accessToken, expires_in: expiresIn } = await spotifyResponse.json();
 
-    await set(process.env.SPOTIFY_ACCESS_TOKEN_REDIS_KEY, accessToken);
-    await expire(process.env.SPOTIFY_ACCESS_TOKEN_REDIS_KEY, expiresIn);
+    await set(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY, accessToken);
+    await expire(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY, expiresIn);
   }
 
-  return await get<string>(process.env.SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
+  return await get<string>(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
 }
 
 export async function getTopArtists(
@@ -52,7 +55,7 @@ export async function getTopArtists(
   });
 
   const response = await fetch(
-    `${process.env.SPOTIFY_API_URL}/me/top/artists?${fetchSearchParams}`,
+    `${import.meta.env.VITE_SPOTIFY_API_URL}/me/top/artists?${fetchSearchParams}`,
     {
       headers: { Authorization: `Bearer ${spotifyAccessToken}` },
     }
