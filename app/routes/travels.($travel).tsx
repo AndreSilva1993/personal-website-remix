@@ -1,6 +1,6 @@
 import '~/styles/travels.css';
 
-import { Suspense } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import { json } from '@remix-run/node';
@@ -35,6 +35,11 @@ export default function Travels() {
   const { t } = useTranslation();
   const { travel: travelParam } = useParams();
   const { travels } = useLoaderData<typeof loader>();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const selectedTravel = travels.find(({ slug }) => slug === travelParam);
 
@@ -58,9 +63,7 @@ export default function Travels() {
           selectedCountries={selectedTravel?.countryCodes || []}
         />
 
-        <Suspense fallback={null}>
-          <LeafletMap coordinates={mapCoordinates} />
-        </Suspense>
+        {isMounted && <LeafletMap coordinates={mapCoordinates} />}
 
         <AnimatePresence mode="wait">
           {!selectedTravel ? (
