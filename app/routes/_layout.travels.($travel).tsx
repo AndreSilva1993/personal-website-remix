@@ -1,11 +1,10 @@
-import '~/styles/travels.css';
+import styles from '~/styles/travels.css?url';
 
+import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
+import { useLoaderData, useParams } from '@remix-run/react';
+import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AnimatePresence } from 'framer-motion';
-import { json } from '@remix-run/node';
-import { useLoaderData, useParams } from '@remix-run/react';
-import type { MetaFunction } from '@remix-run/node';
 
 import travels from '~/components/travels/travels.json';
 import { initI18next } from '~/i18n/i18n';
@@ -13,8 +12,11 @@ import { TravelItem } from '~/components/travels/TravelItem';
 import { TravelList } from '~/components/travels/TravelList';
 import { LeafletMap } from '~/components/travels/LeafletMap.client';
 import { TravelCountries } from '~/components/travels/TravelCountries';
-import { MainContainer } from '~/components/main-container/MainContainer';
 import { PageContainer } from '~/components/page-container/PageContainer';
+
+export const links: LinksFunction = () => {
+  return [{ rel: 'stylesheet', href: styles }];
+};
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
@@ -55,24 +57,22 @@ export default function Travels() {
         .flat();
 
   return (
-    <MainContainer>
-      <PageContainer className="pageContainer">
-        <h1 className="title">{!selectedTravel ? t('travels.title') : selectedTravel.name}</h1>
-        <TravelCountries
-          countries={countries}
-          selectedCountries={selectedTravel?.countryCodes || []}
-        />
+    <PageContainer className="pageContainer">
+      <h1 className="title">{!selectedTravel ? t('travels.title') : selectedTravel.name}</h1>
+      <TravelCountries
+        countries={countries}
+        selectedCountries={selectedTravel?.countryCodes || []}
+      />
 
-        {isMounted && <LeafletMap coordinates={mapCoordinates} />}
+      {isMounted && <LeafletMap coordinates={mapCoordinates} />}
 
-        <AnimatePresence mode="wait">
-          {!selectedTravel ? (
-            <TravelList travels={travels} />
-          ) : (
-            <TravelItem key={selectedTravel.name} travel={selectedTravel} />
-          )}
-        </AnimatePresence>
-      </PageContainer>
-    </MainContainer>
+      <AnimatePresence mode="wait">
+        {!selectedTravel ? (
+          <TravelList travels={travels} />
+        ) : (
+          <TravelItem key={selectedTravel.name} travel={selectedTravel} />
+        )}
+      </AnimatePresence>
+    </PageContainer>
   );
 }

@@ -1,3 +1,6 @@
+import globalStyles from '~/styles/global-styles.css?url';
+import globalStylesVariables from '~/styles/global-styles-variables.css?url';
+
 import { json, type LinksFunction } from '@remix-run/node';
 import {
   Links,
@@ -9,17 +12,18 @@ import {
   useLoaderData,
 } from '@remix-run/react';
 
-import '~/styles/global-styles.css';
-import '~/styles/variables.css';
-
-export const links: LinksFunction = () => [
-  { rel: 'icon', href: '/favicon.png' },
-  { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-  {
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap',
-  },
-];
+export const links: LinksFunction = () => {
+  return [
+    { rel: 'icon', href: '/favicon.png' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    { rel: 'stylesheet', href: globalStyles },
+    { rel: 'stylesheet', href: globalStylesVariables },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap',
+    },
+  ];
+};
 
 export const loader = () => {
   return json({

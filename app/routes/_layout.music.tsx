@@ -1,20 +1,23 @@
-import '~/styles/music.css';
+import styles from '~/styles/music.css?url';
 
 import { json } from '@remix-run/node';
 import { useTranslation } from 'react-i18next';
 import { useLoaderData } from '@remix-run/react';
-import type { MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
 
 import { initI18next } from '~/i18n/i18n';
 import { getTopArtists } from '~/api-clients/spotify';
 import { getTopAlbums, getRecentTracks } from '~/api-clients/last-fm';
-import { MainContainer } from '~/components/main-container/MainContainer';
 import { PageContainer } from '~/components/page-container/PageContainer';
 import { MusicAlbums } from '~/components/music/MusicAlbums';
 import { MusicArtists } from '~/components/music/MusicArtists';
 import { MusicRecentTracks } from '~/components/music/MusicRecentTracks';
 import type { SpotifyTimeRange } from '~/api-clients/spotify.types';
 import type { LastFMTimePeriod } from '~/api-clients/last-fm.types';
+
+export const links: LinksFunction = () => {
+  return [{ rel: 'stylesheet', href: styles }];
+};
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
@@ -52,13 +55,11 @@ export default function Travels() {
   const { recentTracks, topAlbums, topArtists } = useLoaderData<typeof loader>();
 
   return (
-    <MainContainer>
-      <PageContainer className="pageContainer">
-        <h1 className="title">{t('music.title')}</h1>
-        <MusicAlbums initialData={topAlbums} />
-        <MusicArtists initialData={topArtists} />
-        <MusicRecentTracks initialRecentTracks={recentTracks} />
-      </PageContainer>
-    </MainContainer>
+    <PageContainer className="pageContainer">
+      <h1 className="title">{t('music.title')}</h1>
+      <MusicAlbums initialData={topAlbums} />
+      <MusicArtists initialData={topArtists} />
+      <MusicRecentTracks initialRecentTracks={recentTracks} />
+    </PageContainer>
   );
 }
