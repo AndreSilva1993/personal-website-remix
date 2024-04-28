@@ -1,8 +1,9 @@
 {
   "include": [
-    "env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "types/env.d.ts",
+    "types/globals.d.ts",
   ],
   "compilerOptions": {
     "lib": [
