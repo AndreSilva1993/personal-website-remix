@@ -50,7 +50,7 @@ export const loader = async () => {
   });
 };
 
-export default function Travels() {
+export default function MusicPage() {
   const { t } = useTranslation();
   const { recentTracks, topAlbums, topArtists } = useLoaderData<typeof loader>();
 

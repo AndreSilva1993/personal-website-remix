@@ -73,7 +73,7 @@ export const loader = async () => {
   });
 };
 
-export default function Portfolio() {
+export default function PortfolioPage() {
   const { t } = useTranslation();
   const { portfolioItems } = useLoaderData<typeof loader>();
   const [modalActiveItem, setModalActiveItem] = useState<(typeof portfolioItems)[number]>();

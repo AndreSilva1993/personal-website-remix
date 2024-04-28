@@ -1,4 +1,4 @@
-import styles from '~/styles/homepage.css?url';
+import styles from '~/styles/about.css?url';
 
 import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
@@ -26,7 +26,7 @@ export const loader = async () => {
 
   const socialLinks = {
     github: 'https://github.com/AndreSilva1993',
-    linkedIn: 'https://linkedin.com/in/andre-emanuel/',
+    linkedIn: 'https://linkedin.com/in/andre-emanuel',
     '500px': 'https://500px.com/p/andreemanuel1993',
   };
 
@@ -55,7 +55,7 @@ export const loader = async () => {
   });
 };
 
-export default function Homepage() {
+export default function AboutPage() {
   const { t } = useTranslation();
   const { socialLinks, technologies } = useLoaderData<typeof loader>();
 

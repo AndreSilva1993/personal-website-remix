@@ -33,7 +33,7 @@ export const loader = async () => {
   });
 };
 
-export default function Travels() {
+export default function TravelsPage() {
   const { t } = useTranslation();
   const { travel: travelParam } = useParams();
   const { travels } = useLoaderData<typeof loader>();
