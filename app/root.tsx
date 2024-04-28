@@ -2,15 +2,7 @@ import globalStyles from '~/styles/global-styles.css?url';
 import globalStylesVariables from '~/styles/global-styles-variables.css?url';
 
 import { json, type LinksFunction } from '@remix-run/node';
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useLoaderData,
-} from '@remix-run/react';
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react';
 
 export const links: LinksFunction = () => {
   return [
@@ -52,7 +44,6 @@ export default function App() {
           }}
         />
         <ScrollRestoration />
-        <LiveReload />
         <Scripts />
       </body>
     </html>

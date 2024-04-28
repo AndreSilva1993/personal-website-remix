@@ -3,8 +3,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build && vite build --ssr",
+    "dev": "remix vite:dev",
+    "build": "remix vite:dev",
     "type-check": "tsc --noEmit",
     "prepare": "husky install"
   },
