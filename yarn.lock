@@ -1224,13 +1224,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/css-bundle@npm:^2.9.1":
-  version: 2.9.1
-  resolution: "@remix-run/css-bundle@npm:2.9.1"
-  checksum: 5ca933802390cfaf36e07d467a94c3025143cae73b66620cc1be36a32bbcd7ac0513c08f60cfce705a1a350ff531dce334a0385c7092963847c4a6ae1afdbb99
-  languageName: node
-  linkType: hard
-
 "@remix-run/dev@npm:^2.9.1":
   version: 2.9.1
   resolution: "@remix-run/dev@npm:2.9.1"
@@ -2635,8 +2628,8 @@ __metadata:
   linkType: hard
 
 "chokidar@npm:^3.5.1, chokidar@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "chokidar@npm:3.5.3"
+  version: 3.6.0
+  resolution: "chokidar@npm:3.6.0"
   dependencies:
     anymatch: "npm:~3.1.2"
     braces: "npm:~3.0.2"
@@ -2649,7 +2642,7 @@ __metadata:
   dependenciesMeta:
     fsevents:
       optional: true
-  checksum: 1076953093e0707c882a92c66c0f56ba6187831aa51bb4de878c1fec59ae611a3bf02898f190efec8e77a086b8df61c2b2a3ea324642a0558bdf8ee6c5dc9ca1
+  checksum: 8361dcd013f2ddbe260eacb1f3cb2f2c6f2b0ad118708a343a5ed8158941a39cb8fb1d272e0f389712e74ee90ce8ba864eece9e0e62b9705cb468a2f6d917462
   languageName: node
   linkType: hard
 
@@ -7943,7 +7936,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@remix-run/css-bundle": "npm:^2.9.1"
     "@remix-run/dev": "npm:^2.9.1"
     "@remix-run/eslint-config": "npm:^2.9.1"
     "@remix-run/node": "npm:^2.9.1"
