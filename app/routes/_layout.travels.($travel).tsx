@@ -1,18 +1,23 @@
 import styles from '~/styles/travels.css?url';
 
-import { json, type LinksFunction, type MetaFunction } from '@vercel/remix';
 import { useLoaderData, useParams } from '@remix-run/react';
+import {
+  json,
+  type LinksFunction,
+  type MetaFunction,
+  type LoaderFunctionArgs,
+} from '@vercel/remix';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import travels from '~/components/travels/travels.json';
-import { initI18next } from '~/i18n/i18n';
 import { TravelItem } from '~/components/travels/TravelItem';
 import { TravelList } from '~/components/travels/TravelList';
 import { LeafletMap } from '~/components/travels/LeafletMap.client';
 import { TravelCountries } from '~/components/travels/TravelCountries';
 import { PageContainer } from '~/components/page-container/PageContainer';
+import { i18n } from '~/i18n/i18n.server';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: styles }];
@@ -22,9 +27,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
 };
 
-export const loader = async () => {
-  const i18nInstance = await initI18next();
-  const t = i18nInstance.getFixedT('en');
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const t = await i18n.getFixedT(request);
 
   return json({
     travels,

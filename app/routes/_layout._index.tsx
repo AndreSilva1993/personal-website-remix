@@ -1,13 +1,18 @@
 import styles from '~/styles/about.css?url';
 
-import { json, type LinksFunction, type MetaFunction } from '@vercel/remix';
+import {
+  json,
+  type LinksFunction,
+  type MetaFunction,
+  type LoaderFunctionArgs,
+} from '@vercel/remix';
 import { useLoaderData } from '@remix-run/react';
 import { motion } from 'framer-motion';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { initI18next } from '~/i18n/i18n';
 import { PageContainer } from '~/components/page-container/PageContainer';
+import { i18n } from '~/i18n/i18n.server';
 
 export const links: LinksFunction = () => {
   return [
@@ -20,9 +25,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
 };
 
-export const loader = async () => {
-  const i18nInstance = await initI18next();
-  const t = i18nInstance.getFixedT('en');
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const t = await i18n.getFixedT(request);
 
   const socialLinks = {
     github: 'https://github.com/AndreSilva1993',

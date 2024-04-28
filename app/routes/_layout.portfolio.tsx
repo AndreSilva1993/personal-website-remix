@@ -1,14 +1,19 @@
 import styles from '~/styles/portfolio.css?url';
 
-import { useState } from 'react';
-import { json, type LinksFunction, type MetaFunction } from '@vercel/remix';
 import { useLoaderData } from '@remix-run/react';
+import {
+  json,
+  type LinksFunction,
+  type MetaFunction,
+  type LoaderFunctionArgs,
+} from '@vercel/remix';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { initI18next } from '~/i18n/i18n';
 import { PageContainer } from '~/components/page-container/PageContainer';
 import { PortfolioItem } from '~/components/portfolio/PortfolioItem';
 import { PortfolioModal } from '~/components/portfolio/PortfolioModal';
+import { i18n } from '~/i18n/i18n.server';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: styles },
@@ -22,9 +27,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
 };
 
-export const loader = async () => {
-  const i18nInstance = await initI18next();
-  const t = i18nInstance.getFixedT('en');
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const t = await i18n.getFixedT(request);
 
   return json({
     seoTitle: t('portfolio.seo.title'),

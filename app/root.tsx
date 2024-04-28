@@ -1,8 +1,11 @@
 import globalStyles from '~/styles/global-styles.css?url';
 import globalStylesVariables from '~/styles/global-styles-variables.css?url';
 
-import { json, type LinksFunction } from '@vercel/remix';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react';
+import { json, type LinksFunction, type LoaderFunctionArgs } from '@vercel/remix';
+import { useTranslation } from 'react-i18next';
+
+import { i18n } from './i18n/i18n.server';
 
 export const links: LinksFunction = () => {
   return [
@@ -17,8 +20,11 @@ export const links: LinksFunction = () => {
   ];
 };
 
-export const loader = () => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const locale = await i18n.getLocale(request);
+
   return json({
+    locale,
     ENV: {
       STADIA_MAP_API_KEY: import.meta.env.VITE_STADIA_MAP_API_KEY,
     },
@@ -26,10 +32,12 @@ export const loader = () => {
 };
 
 export default function App() {
-  const loaderData = useLoaderData<typeof loader>();
+  const { ENV, locale } = useLoaderData<typeof loader>();
+
+  const { i18n } = useTranslation();
 
   return (
-    <html lang="en">
+    <html lang={locale} dir={i18n.dir()}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -40,7 +48,7 @@ export default function App() {
         <Outlet />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.ENV = ${JSON.stringify(loaderData.ENV)}`,
+            __html: `window.ENV = ${JSON.stringify(ENV)}`,
           }}
         />
         <ScrollRestoration />
