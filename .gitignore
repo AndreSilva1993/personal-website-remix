@@ -7,12 +7,9 @@ node_modules
 .DS_Store
 
 # Yarn related files.
-/.yarn/cache
-/.yarn/unplugged
-/.yarn/install-state.gz
+.yarn
 
-/build/
-/public/build
-/api/index.js
-/api/index.js.map
-/api/metafile*
+# Build related files.
+api
+build
+public/build
