@@ -1,6 +1,6 @@
 import styles from '~/styles/_layout.css?url';
 
-import type { LinksFunction } from '@remix-run/node';
+import type { LinksFunction } from '@vercel/remix';
 import { Outlet } from '@remix-run/react';
 
 import { NavigationMenu } from '~/components/navigation-menu/NavigationMenu';

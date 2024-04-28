@@ -1,9 +1,8 @@
 import styles from '~/styles/music.css?url';
 
-import { json } from '@remix-run/node';
-import { useTranslation } from 'react-i18next';
+import { json, type LinksFunction, type MetaFunction } from '@vercel/remix';
 import { useLoaderData } from '@remix-run/react';
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import { useTranslation } from 'react-i18next';
 
 import { initI18next } from '~/i18n/i18n';
 import { getTopArtists } from '~/api-clients/spotify';

@@ -1,7 +1,7 @@
 import styles from '~/styles/portfolio.css?url';
 
 import { useState } from 'react';
-import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
+import { json, type LinksFunction, type MetaFunction } from '@vercel/remix';
 import { useLoaderData } from '@remix-run/react';
 import { useTranslation } from 'react-i18next';
 

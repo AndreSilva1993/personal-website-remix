@@ -1,7 +1,7 @@
 import globalStyles from '~/styles/global-styles.css?url';
 import globalStylesVariables from '~/styles/global-styles-variables.css?url';
 
-import { json, type LinksFunction } from '@remix-run/node';
+import { json, type LinksFunction } from '@vercel/remix';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react';
 
 export const links: LinksFunction = () => {

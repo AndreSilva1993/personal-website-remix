@@ -1,6 +1,6 @@
 import styles from '~/styles/about.css?url';
 
-import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
+import { json, type LinksFunction, type MetaFunction } from '@vercel/remix';
 import { useLoaderData } from '@remix-run/react';
 import { motion } from 'framer-motion';
 import { Fragment } from 'react';

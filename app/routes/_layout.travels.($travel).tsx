@@ -1,6 +1,6 @@
 import styles from '~/styles/travels.css?url';
 
-import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
+import { json, type LinksFunction, type MetaFunction } from '@vercel/remix';
 import { useLoaderData, useParams } from '@remix-run/react';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
