@@ -1224,7 +1224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/dev@npm:2.9.1":
+"@remix-run/dev@npm:^2.9.1":
   version: 2.9.1
   resolution: "@remix-run/dev@npm:2.9.1"
   dependencies:
@@ -1302,7 +1302,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/eslint-config@npm:2.9.1":
+"@remix-run/eslint-config@npm:^2.9.1":
   version: 2.9.1
   resolution: "@remix-run/eslint-config@npm:2.9.1"
   dependencies:
@@ -1348,7 +1348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/node@npm:2.9.1":
+"@remix-run/node@npm:2.9.1, @remix-run/node@npm:^2.9.1":
   version: 2.9.1
   resolution: "@remix-run/node@npm:2.9.1"
   dependencies:
@@ -1368,7 +1368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/react@npm:2.9.1":
+"@remix-run/react@npm:^2.9.1":
   version: 2.9.1
   resolution: "@remix-run/react@npm:2.9.1"
   dependencies:
@@ -1395,7 +1395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/serve@npm:2.9.1":
+"@remix-run/serve@npm:^2.9.1":
   version: 2.9.1
   resolution: "@remix-run/serve@npm:2.9.1"
   dependencies:
@@ -1413,7 +1413,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/server-runtime@npm:2.9.1":
+"@remix-run/server-runtime@npm:2.9.1, @remix-run/server-runtime@npm:^2.9.1":
   version: 2.9.1
   resolution: "@remix-run/server-runtime@npm:2.9.1"
   dependencies:
@@ -8108,12 +8108,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@remix-run/dev": "npm:2.9.1"
-    "@remix-run/eslint-config": "npm:2.9.1"
-    "@remix-run/node": "npm:2.9.1"
-    "@remix-run/react": "npm:2.9.1"
-    "@remix-run/serve": "npm:2.9.1"
-    "@remix-run/server-runtime": "npm:2.9.1"
+    "@remix-run/dev": "npm:^2.9.1"
+    "@remix-run/eslint-config": "npm:^2.9.1"
+    "@remix-run/node": "npm:^2.9.1"
+    "@remix-run/react": "npm:^2.9.1"
+    "@remix-run/serve": "npm:^2.9.1"
+    "@remix-run/server-runtime": "npm:^2.9.1"
     "@types/leaflet": "npm:^1.9.3"
     "@types/react": "npm:^18.0.35"
     "@types/react-dom": "npm:^18.0.11"
