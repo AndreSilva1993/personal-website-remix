@@ -3,6 +3,7 @@ import globalStylesVariables from '~/styles/global-styles-variables.css?url';
 
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { json, type LinksFunction, type LoaderFunctionArgs } from '@vercel/remix';
 import { useTranslation } from 'react-i18next';
 
@@ -46,7 +47,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Analytics />
         <Outlet />
         <script
           dangerouslySetInnerHTML={{
@@ -55,6 +55,10 @@ export default function App() {
         />
         <ScrollRestoration />
         <Scripts />
+
+        {/* Vercel Analytics */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

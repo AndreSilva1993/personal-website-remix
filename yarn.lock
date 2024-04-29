@@ -2025,6 +2025,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/speed-insights@npm:^1.0.10":
+  version: 1.0.10
+  resolution: "@vercel/speed-insights@npm:1.0.10"
+  peerDependencies:
+    "@sveltejs/kit": ^1 || ^2
+    next: ">= 13"
+    react: ^18 || ^19
+    svelte: ^4
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    "@sveltejs/kit":
+      optional: true
+    next:
+      optional: true
+    react:
+      optional: true
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: b1c2f91b153d0203e3571e75a775fe457c1d61eb1954601ae63fff0903694b48a0684ea1761c3618ccda4bef3bf1ec1a7ffdf34c18ffd35079f202cf6372e139
+  languageName: node
+  linkType: hard
+
 "@vercel/static-config@npm:3.0.0":
   version: 3.0.0
   resolution: "@vercel/static-config@npm:3.0.0"
@@ -8101,6 +8128,7 @@ __metadata:
     "@upstash/redis": "npm:^1.22.0"
     "@vercel/analytics": "npm:^1.2.2"
     "@vercel/remix": "npm:^2.9.0"
+    "@vercel/speed-insights": "npm:^1.0.10"
     classnames: "npm:^2.3.2"
     eslint: "npm:^8.38.0"
     framer-motion: "npm:^10.12.12"
