@@ -40,7 +40,7 @@
 }
 
 .countryImage {
-  height: 5rem;
+  height: 100%;
 }
 
 .mapContainer {
@@ -159,6 +159,16 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .country {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem 1rem;
+  }
+
+  .countryImage {
+    height: 100%;
+  }
+
   .mapContainer {
     aspect-ratio: 4 / 3;
   }
