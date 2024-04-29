@@ -1,4 +1,4 @@
-import { Redis } from '@upstash/redis';
+import { createClient } from '@vercel/kv';
 
 import type {
   SpotifyTopArtist,
@@ -7,9 +7,9 @@ import type {
 } from './spotify.types';
 
 async function getSpotifyAccessToken() {
-  const { get, set, expire, exists } = new Redis({
-    url: import.meta.env.VITE_UPSTASH_REDIS_URL,
-    token: import.meta.env.VITE_UPSTASH_REDIS_TOKEN,
+  const { exists, get, set, expire } = createClient({
+    url: import.meta.env.VITE_REDIS_DATABASE_REST_API_URL,
+    token: import.meta.env.VITE_REDIS_DATABASE_REST_API_TOKEN,
   });
 
   const accessTokenExists = await exists(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
