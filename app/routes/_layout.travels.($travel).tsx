@@ -1,6 +1,6 @@
 import styles from '~/styles/travels.css?url';
 
-import { useLoaderData, useParams } from '@remix-run/react';
+import { useLoaderData } from '@remix-run/react';
 import {
   json,
   type LinksFunction,
@@ -27,38 +27,37 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: data?.seoTitle }, { name: 'description', content: data?.seoDescription }];
 };
 
-export const loader = async ({ request }: LoaderFunctionArgs) => {
+export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   const t = await i18n.getFixedT(request);
+
+  const { travel: travelInParams } = params;
+
+  const selectedTravel = travels.find(({ slug }) => slug === travelInParams);
 
   return json({
     travels,
+    selectedTravel,
+    countries: [...new Set(travels.flatMap(({ countryCodes }) => countryCodes)).values()],
+    mapMarkersCoordinates: selectedTravel
+      ? selectedTravel.places.map(({ coordinates }) => coordinates as L.LatLngExpression)
+      : travels.flatMap(({ places }) =>
+          places.map(({ coordinates }) => coordinates as L.LatLngExpression)
+        ),
     seoTitle: t('travels.seo.title'),
     seoDescription: t('travels.seo.description'),
   });
 };
 
 export default function TravelsPage() {
+  const { travels, countries, selectedTravel, mapMarkersCoordinates } =
+    useLoaderData<typeof loader>();
+
   const { t } = useTranslation();
-  const { travel: travelParam } = useParams();
-  const { travels } = useLoaderData<typeof loader>();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  const selectedTravel = travels.find(({ slug }) => slug === travelParam);
-
-  const countries = travels
-    .map(({ countryCodes }) => countryCodes)
-    .flat()
-    .filter((country, index, array) => array.indexOf(country) === index);
-
-  const mapCoordinates = selectedTravel
-    ? selectedTravel.places.map(({ coordinates }) => coordinates as L.LatLngExpression)
-    : travels
-        .map(({ places }) => places.map(({ coordinates }) => coordinates as L.LatLngExpression))
-        .flat();
 
   return (
     <PageContainer className="pageContainer">
@@ -68,7 +67,7 @@ export default function TravelsPage() {
         selectedCountries={selectedTravel?.countryCodes || []}
       />
 
-      {isMounted && <LeafletMap coordinates={mapCoordinates} />}
+      {isMounted && <LeafletMap coordinates={mapMarkersCoordinates} />}
 
       <AnimatePresence mode="wait">
         {!selectedTravel ? (
