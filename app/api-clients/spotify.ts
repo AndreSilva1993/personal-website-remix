@@ -7,12 +7,12 @@ import type {
 } from './spotify.types';
 
 async function getSpotifyAccessToken() {
-  const { exists, get, set, expire } = createClient({
+  const kv = createClient({
     url: import.meta.env.VITE_REDIS_DATABASE_REST_API_URL,
     token: import.meta.env.VITE_REDIS_DATABASE_REST_API_TOKEN,
   });
 
-  const accessTokenExists = await exists(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
+  const accessTokenExists = await kv.exists(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
   if (!accessTokenExists) {
     const clientIdAndSecret = btoa(
       `${import.meta.env.VITE_SPOTIFY_CLIENT_ID}:${import.meta.env.VITE_SPOTIFY_CLIENT_SECRET}`
@@ -35,11 +35,11 @@ async function getSpotifyAccessToken() {
 
     const { access_token: accessToken, expires_in: expiresIn } = await spotifyResponse.json();
 
-    await set(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY, accessToken);
-    await expire(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY, expiresIn);
+    await kv.set(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY, accessToken);
+    await kv.expire(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY, expiresIn);
   }
 
-  return await get<string>(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
+  return await kv.get<string>(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN_REDIS_KEY);
 }
 
 export async function getTopArtists(
