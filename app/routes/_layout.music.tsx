@@ -1,22 +1,22 @@
 import styles from '~/styles/music.css?url';
 
+import { useLoaderData } from '@remix-run/react';
 import {
   json,
   type LinksFunction,
   type MetaFunction,
   type LoaderFunctionArgs,
 } from '@vercel/remix';
-import { useLoaderData } from '@remix-run/react';
 import { useTranslation } from 'react-i18next';
 
 import { getTopAlbums, getRecentTracks } from '~/api-clients/last-fm';
 import type { LastFMTimePeriod } from '~/api-clients/last-fm.types';
 import { getTopArtists } from '~/api-clients/spotify';
 import type { SpotifyTimeRange } from '~/api-clients/spotify.types';
-import { PageContainer } from '~/components/page-container/PageContainer';
 import { MusicAlbums } from '~/components/music/MusicAlbums';
 import { MusicArtists } from '~/components/music/MusicArtists';
 import { MusicRecentTracks } from '~/components/music/MusicRecentTracks';
+import { PageContainer } from '~/components/page-container/PageContainer';
 import { i18n } from '~/i18n/i18n.server';
 
 export const links: LinksFunction = () => {

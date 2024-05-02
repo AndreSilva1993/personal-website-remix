@@ -1,14 +1,14 @@
 import styles from './MusicAlbums.module.css';
 
+import { useFetcher } from '@remix-run/react';
 import { useEffect, useState, type ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useFetcher } from '@remix-run/react';
 
+import type { LastFMTimePeriod, LastFMTopAlbum } from '~/api-clients/last-fm.types';
 import { Button } from '~/components/button/Button';
-import { Select } from '~/components/select/Select';
 import { ImageGrid } from '~/components/image-grid/ImageGrid';
 import { LoadingDots } from '~/components/loading-dots/LoadingDots';
-import type { LastFMTimePeriod, LastFMTopAlbum } from '~/api-clients/last-fm.types';
+import { Select } from '~/components/select/Select';
 
 interface MusicAlbumsProps {
   initialData: {

@@ -1,9 +1,9 @@
 import styles from './PortfolioItem.module.css';
 
 import classNames from 'classnames';
+import { useAnimation, motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAnimation, motion } from 'framer-motion';
 
 interface PortfolioItemProps {
   index: number;

@@ -1,12 +1,12 @@
 import styles from '~/styles/about.css?url';
 
+import { useLoaderData } from '@remix-run/react';
 import {
   json,
   type LinksFunction,
   type MetaFunction,
   type LoaderFunctionArgs,
 } from '@vercel/remix';
-import { useLoaderData } from '@remix-run/react';
 import { motion } from 'framer-motion';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';

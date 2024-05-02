@@ -1,10 +1,10 @@
-import globalStyles from '~/styles/global-styles.css?url';
 import globalStylesVariables from '~/styles/global-styles-variables.css?url';
+import globalStyles from '~/styles/global-styles.css?url';
 
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react';
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { json, type LinksFunction, type LoaderFunctionArgs } from '@vercel/remix';
+import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { useTranslation } from 'react-i18next';
 
 import { i18n } from './i18n/i18n.server';

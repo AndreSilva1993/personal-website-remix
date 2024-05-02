@@ -1,13 +1,14 @@
 import styles from './NavigationMenu.module.css';
 
-import { PersonIcon } from '~/icons/PersonIcon';
-import { MusicNoteIcon } from '~/icons/MusicNoteIcon';
-import { PhotoAlbumIcon } from '~/icons/PhotoAlbumIcon';
-import { LocationOnIcon } from '~/icons/LocationOnIcon';
-import { MobileNavigationMenu } from './MobileNavigationMenu';
-import { DesktopNavigationMenu } from './DesktopNavigationMenu';
-
 import { useTranslation } from 'react-i18next';
+
+import { DesktopNavigationMenu } from './DesktopNavigationMenu';
+import { MobileNavigationMenu } from './MobileNavigationMenu';
+
+import { LocationOnIcon } from '~/icons/LocationOnIcon';
+import { MusicNoteIcon } from '~/icons/MusicNoteIcon';
+import { PersonIcon } from '~/icons/PersonIcon';
+import { PhotoAlbumIcon } from '~/icons/PhotoAlbumIcon';
 
 export function NavigationMenu() {
   const { t } = useTranslation();

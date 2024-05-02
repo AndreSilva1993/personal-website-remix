@@ -2,8 +2,8 @@ import styles from './PortfolioModal.module.css';
 
 import { useTranslation } from 'react-i18next';
 
-import { Modal } from '~/components/modal/Modal';
 import { Carousel } from '~/components/carousel/Carousel';
+import { Modal } from '~/components/modal/Modal';
 
 interface PortfolioModalProps {
   open: boolean;

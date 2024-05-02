@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-import { Masonry, MasonryItem } from '~/components/masonry/Masonry';
-
 import type { ITravel } from './Travel.types';
+
+import { Masonry, MasonryItem } from '~/components/masonry/Masonry';
 
 interface TravelItemProps {
   travel: ITravel;

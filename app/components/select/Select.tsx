@@ -1,7 +1,6 @@
 import styles from './Select.module.css';
 
 import classNames from 'classnames';
-
 import type { ChangeEventHandler, ReactNode } from 'react';
 
 interface SelectProps {

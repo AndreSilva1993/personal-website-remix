@@ -1,7 +1,6 @@
 import styles from './Masonry.module.css';
 
 import { Children } from 'react';
-
 import type { ReactElement } from 'react';
 
 interface MasonryProps {

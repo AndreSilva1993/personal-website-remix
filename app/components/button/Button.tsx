@@ -1,8 +1,7 @@
-import styles from "./Button.module.css";
+import styles from './Button.module.css';
 
-import classNames from "classnames";
-
-import type { ReactNode } from "react";
+import classNames from 'classnames';
+import type { ReactNode } from 'react';
 
 interface ButtonProps {
   className?: string;

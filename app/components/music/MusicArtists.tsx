@@ -1,15 +1,14 @@
 import styles from './MusicArtists.module.css';
 
+import { useFetcher } from '@remix-run/react';
 import { useState, useEffect, type ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useFetcher } from '@remix-run/react';
 
-import { Select } from '~/components/select/Select';
+import type { SpotifyTimeRange, SpotifyTopArtist } from '~/api-clients/spotify.types';
 import { Button } from '~/components/button/Button';
 import { ImageGrid } from '~/components/image-grid/ImageGrid';
 import { LoadingDots } from '~/components/loading-dots/LoadingDots';
-
-import type { SpotifyTimeRange, SpotifyTopArtist } from '~/api-clients/spotify.types';
+import { Select } from '~/components/select/Select';
 
 interface MusicArtistsProps {
   initialData: {

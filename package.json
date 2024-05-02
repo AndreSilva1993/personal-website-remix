@@ -6,6 +6,8 @@
     "dev": "remix vite:dev",
     "build": "remix vite:build",
     "type-check": "tsc --noEmit",
+    "lint:check": "eslint --ext .ts,.tsx .",
+    "lint:fix": "eslint --ext .ts,.tsx --fix .",
     "prepare": "husky install"
   },
   "dependencies": {

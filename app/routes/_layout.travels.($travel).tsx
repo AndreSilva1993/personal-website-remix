@@ -11,12 +11,12 @@ import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import travels from '~/components/travels/travels.json';
-import { TravelItem } from '~/components/travels/TravelItem';
-import { TravelList } from '~/components/travels/TravelList';
+import { PageContainer } from '~/components/page-container/PageContainer';
 import { LeafletMap } from '~/components/travels/LeafletMap.client';
 import { TravelCountries } from '~/components/travels/TravelCountries';
-import { PageContainer } from '~/components/page-container/PageContainer';
+import { TravelItem } from '~/components/travels/TravelItem';
+import { TravelList } from '~/components/travels/TravelList';
+import travels from '~/components/travels/travels.json';
 import { i18n } from '~/i18n/i18n.server';
 
 export const links: LinksFunction = () => {
