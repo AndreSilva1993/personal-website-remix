@@ -17,7 +17,7 @@ import { i18n } from '~/i18n/i18n.server';
 export const links: LinksFunction = () => {
   return [
     { rel: 'stylesheet', href: styles },
-    { rel: 'preload', href: '/images/about/about.jpeg', as: 'image' },
+    { rel: 'preload', href: '/images/about/about.avif', as: 'image' },
   ];
 };
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
   return (
     <PageContainer className="pageContainer">
       <h1 className="title">{t('about.title')}</h1>
-      <img src="/images/about/about.jpeg" alt={t('about.title') || ''} className="imageWrapper" />
+      <img src="/images/about/about.avif" alt={t('about.title') || ''} className="imageWrapper" />
 
       <div className="titleWrapper">
         <h2 className="subTitle">{t('about.about-me')}</h2>
