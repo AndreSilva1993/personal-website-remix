@@ -10,9 +10,9 @@ import { useLoaderData } from '@remix-run/react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { PortfolioItem } from '../components/portfolio/PortfolioItem';
+import { PortfolioModal } from '../components/portfolio/PortfolioModal';
 import { PageContainer } from '~/components/page-container/PageContainer';
-import { PortfolioItem } from '~/components/portfolio/PortfolioItem';
-import { PortfolioModal } from '~/components/portfolio/PortfolioModal';
 import { i18n } from '~/i18n/i18n.server';
 
 export const links: LinksFunction = () => [
