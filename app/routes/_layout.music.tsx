@@ -1,12 +1,12 @@
 import styles from '~/styles/music.css?url';
 
-import { useLoaderData } from '@remix-run/react';
 import {
   json,
   type LinksFunction,
   type MetaFunction,
   type LoaderFunctionArgs,
-} from '@vercel/remix';
+} from '@remix-run/cloudflare';
+import { useLoaderData } from '@remix-run/react';
 import { useTranslation } from 'react-i18next';
 
 import { getTopAlbums, getRecentTracks } from '~/api-clients/last-fm';

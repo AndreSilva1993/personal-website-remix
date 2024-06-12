@@ -1,12 +1,14 @@
+import type { EntryContext } from '@remix-run/cloudflare';
 import { RemixServer } from '@remix-run/react';
-import { handleRequest, type EntryContext } from '@vercel/remix';
 import { createInstance } from 'i18next';
-import { initReactI18next, I18nextProvider } from 'react-i18next';
+import { isbot } from 'isbot';
+import { renderToReadableStream } from 'react-dom/server';
+import { I18nextProvider, initReactI18next } from 'react-i18next';
 
 import { i18n } from './i18n/i18n.server';
 import { i18nextOptions } from './i18n/i18nextOptions';
 
-export default async function (
+export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
@@ -23,11 +25,27 @@ export default async function (
     lng: language,
   });
 
-  const remixServer = (
+  const body = await renderToReadableStream(
     <I18nextProvider i18n={i18nInstance}>
       <RemixServer context={remixContext} url={request.url} />
-    </I18nextProvider>
+    </I18nextProvider>,
+    {
+      signal: request.signal,
+      onError(error: unknown) {
+        // Log streaming rendering errors from inside the shell
+        console.error(error);
+        responseStatusCode = 500;
+      },
+    }
   );
 
-  return handleRequest(request, responseStatusCode, responseHeaders, remixServer);
+  if (isbot(request.headers.get('user-agent') || '')) {
+    await body.allReady;
+  }
+
+  responseHeaders.set('Content-Type', 'text/html');
+  return new Response(body, {
+    headers: responseHeaders,
+    status: responseStatusCode,
+  });
 }

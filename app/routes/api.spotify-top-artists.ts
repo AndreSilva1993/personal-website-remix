@@ -1,4 +1,4 @@
-import { json, type LoaderFunction } from '@vercel/remix';
+import { json, type LoaderFunction } from '@remix-run/cloudflare';
 
 import { getTopArtists } from '~/api-clients/spotify';
 import type { SpotifyTimeRange } from '~/api-clients/spotify.types';

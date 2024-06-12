@@ -1,10 +1,8 @@
 import globalStylesVariables from '~/styles/global-styles-variables.css?url';
 import globalStyles from '~/styles/global-styles.css?url';
 
+import { json, type LinksFunction, type LoaderFunctionArgs } from '@remix-run/cloudflare';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react';
-import { Analytics } from '@vercel/analytics/react';
-import { json, type LinksFunction, type LoaderFunctionArgs } from '@vercel/remix';
-import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { useTranslation } from 'react-i18next';
 
 import { i18n } from './i18n/i18n.server';
@@ -55,10 +53,6 @@ export default function App() {
         />
         <ScrollRestoration />
         <Scripts />
-
-        {/* Vercel Analytics */}
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

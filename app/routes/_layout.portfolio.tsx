@@ -1,12 +1,12 @@
 import styles from '~/styles/portfolio.css?url';
 
-import { useLoaderData } from '@remix-run/react';
 import {
   json,
   type LinksFunction,
   type MetaFunction,
   type LoaderFunctionArgs,
-} from '@vercel/remix';
+} from '@remix-run/cloudflare';
+import { useLoaderData } from '@remix-run/react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

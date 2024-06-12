@@ -1,7 +1,7 @@
 import styles from '~/styles/_layout.css?url';
 
+import type { LinksFunction } from '@remix-run/cloudflare';
 import { Outlet } from '@remix-run/react';
-import type { LinksFunction } from '@vercel/remix';
 
 import { NavigationMenu } from '~/components/navigation-menu/NavigationMenu';
 

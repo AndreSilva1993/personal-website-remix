@@ -1,4 +1,3 @@
-/// <reference types="@remix-run/node" />
 /// <reference types="vite/client" />
 
 // See https://vitejs.dev/guide/env-and-mode for additional documentation

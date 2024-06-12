@@ -2,6 +2,10 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/.server/**/*.ts",
+    "**/.server/**/*.tsx",
+    "**/.client/**/*.ts",
+    "**/.client/**/*.tsx",
     "types/env.d.ts",
     "types/globals.d.ts",
   ],
@@ -9,7 +13,10 @@
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ES2019"
+      "ES2022"
+    ],
+    "types": [
+      "@remix-run/cloudflare"
     ],
     "skipLibCheck": true,
     "isolatedModules": true,

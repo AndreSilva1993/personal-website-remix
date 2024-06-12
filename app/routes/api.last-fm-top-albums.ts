@@ -1,4 +1,4 @@
-import { json, type LoaderFunction } from '@vercel/remix';
+import { json, type LoaderFunction } from '@remix-run/cloudflare';
 
 import { getTopAlbums } from '~/api-clients/last-fm';
 import type { LastFMTimePeriod } from '~/api-clients/last-fm.types';
