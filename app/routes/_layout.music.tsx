@@ -9,9 +9,9 @@ import {
 import { useLoaderData } from '@remix-run/react';
 import { useTranslation } from 'react-i18next';
 
-import { getTopAlbums, getRecentTracks } from '~/api-clients/last-fm';
+import { getTopAlbums, getRecentTracks } from '~/api-clients/last-fm.server';
 import type { LastFMTimePeriod } from '~/api-clients/last-fm.types';
-import { getTopArtists } from '~/api-clients/spotify';
+import { getTopArtists } from '~/api-clients/spotify.server';
 import type { SpotifyTimeRange } from '~/api-clients/spotify.types';
 import { MusicAlbums } from '~/components/music/MusicAlbums';
 import { MusicArtists } from '~/components/music/MusicArtists';
