@@ -39,6 +39,8 @@ export async function getTopArtists(
   page: number = 1,
   timeRange: SpotifyTimeRange = 'long_term'
 ): Promise<SpotifyTopArtist[]> {
+  return [];
+
   const spotifyAccessToken = await getSpotifyAccessToken();
 
   const fetchSearchParams = new URLSearchParams({
