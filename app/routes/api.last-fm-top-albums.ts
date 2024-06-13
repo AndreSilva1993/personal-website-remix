@@ -1,6 +1,6 @@
 import { json, type LoaderFunction } from '@remix-run/cloudflare';
 
-import { getTopAlbums } from '~/api-clients/last-fm';
+import { getTopAlbums } from '~/api-clients/last-fm.server';
 import type { LastFMTimePeriod } from '~/api-clients/last-fm.types';
 
 export const loader: LoaderFunction = async ({ request }) => {

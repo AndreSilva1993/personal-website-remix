@@ -1,6 +1,6 @@
 import { json, type LoaderFunction } from '@remix-run/cloudflare';
 
-import { getTopArtists } from '~/api-clients/spotify';
+import { getTopArtists } from '~/api-clients/spotify.server';
 import type { SpotifyTimeRange } from '~/api-clients/spotify.types';
 
 export const loader: LoaderFunction = async ({ request }) => {
